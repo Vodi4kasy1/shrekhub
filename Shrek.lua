@@ -72,30 +72,30 @@ Section:NewButton("Sell", "Sell NPC", function()
 end)
  
 local Section_char = character_sec:NewSection("Character")
-Section_char:NewButton("Speed 1", "WalkSpeed = 100", function()
+Section_char:NewButton("Speed 30", "WalkSpeed = 30", function()
     while true do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
         wait()
     end
 end)
  
-Section_char:NewButton("Speed 2", "WalkSpeed = 200", function()
+Section_char:NewButton("Speed 300", "WalkSpeed = 300", function()
     while true do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300
         wait()
     end
 end)
  
-Section_char:NewButton("Jump 1", "JumpPower = 100", function()
+Section_char:NewButton("Jump 60", "JumpPower = 60", function()
     while true do
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 60
         wait()
     end
 end)
  
-Section_char:NewButton("Jump 2", "JumpPower = 200", function()
+Section_char:NewButton("Jump 300", "JumpPower = 300", function()
     while true do
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 300
         wait()
     end
 end)
