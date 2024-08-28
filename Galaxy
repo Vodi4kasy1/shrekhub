@@ -1,0 +1,160 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("Galaxy<3", "Default")
+
+local tab1 = DrRayLibrary.newTab("Player", "ImageIdHere")
+
+tab1.newSlider("Walk Speed", "SpeedSlider", 1000, false, function(value)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.WalkSpeed = value
+    end
+end)
+
+tab1.newSlider("Jump Power", "JumpSlider", 1000, false, function(value)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.JumpPower = value
+    end
+end)
+
+local showNames = false
+tab1.newToggle("Show Player Names", "ToggleNames", false, function(state)
+    showNames = state
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        local character = player.Character
+        if character then
+            local head = character:FindFirstChild("Head")
+            local torso = character:FindFirstChild("HumanoidRootPart") or character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso")
+            
+            local billboard = head and head:FindFirstChild("BillboardGui")
+            if billboard then
+                billboard.Enabled = showNames
+            end
+
+            local highlight = character:FindFirstChildOfClass("Highlight")
+            if highlight then
+                highlight.Enabled = showNames
+            end
+
+            if not billboard then
+                billboard = Instance.new("BillboardGui")
+                billboard.Name = "BillboardGui"
+                billboard.Adornee = head
+                billboard.Size = UDim2.new(0, 200, 0, 30)
+                billboard.StudsOffset = Vector3.new(0, 3, 0)
+                billboard.Parent = head
+
+                local frame = Instance.new("Frame")
+                frame.Size = UDim2.new(1, 0, 1, 0)
+                frame.BackgroundTransparency = 1
+                frame.Parent = billboard
+
+                local uiListLayout = Instance.new("UIListLayout")
+                uiListLayout.FillDirection = Enum.FillDirection.Horizontal
+                uiListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+                uiListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+                uiListLayout.Padding = UDim.new(0, 5)
+                uiListLayout.Parent = frame
+
+                local healthLabel = Instance.new("TextLabel")
+                healthLabel.Name = "HealthLabel"
+                healthLabel.TextSize = 14
+                healthLabel.TextColor3 = Color3.new(1, 1, 1)
+                healthLabel.TextStrokeTransparency = 0.5
+                healthLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+                healthLabel.BackgroundTransparency = 1
+                healthLabel.Size = UDim2.new(0, 80, 0, 30)
+                healthLabel.Text = "Health: "
+                healthLabel.Font = Enum.Font.SourceSansBold
+                healthLabel.TextScaled = false
+                healthLabel.TextWrapped = true
+                healthLabel.Parent = frame
+
+                local nameLabel = Instance.new("TextLabel")
+                nameLabel.Name = "NameLabel"
+                nameLabel.TextSize = 14
+                nameLabel.TextColor3 = Color3.new(1, 1, 1)
+                nameLabel.TextStrokeTransparency = 0.5
+                nameLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+                nameLabel.BackgroundTransparency = 1
+                nameLabel.Size = UDim2.new(0, 120, 0, 30)
+                nameLabel.Text = player.Name
+                nameLabel.Font = Enum.Font.SourceSansBold
+                nameLabel.TextScaled = false
+                nameLabel.TextWrapped = true
+                nameLabel.Parent = frame
+
+                local humanoid = character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+                        healthLabel.Text = "Health: " .. math.ceil(humanoid.Health)
+                    end)
+                    healthLabel.Text = "Health: " .. math.ceil(humanoid.Health)
+                end
+            else
+                local nameLabel = billboard:FindFirstChild("NameLabel")
+                local healthLabel = billboard:FindFirstChild("HealthLabel")
+                if nameLabel then
+                    nameLabel.Text = player.Name
+                end
+                local humanoid = character:FindFirstChildOfClass("Humanoid")
+                if humanoid and healthLabel then
+                    healthLabel.Text = "Health: " .. math.ceil(humanoid.Health)
+                end
+            end
+
+            if not highlight then
+                highlight = Instance.new("Highlight")
+                highlight.Name = "Highlight"
+                highlight.Adornee = character
+                highlight.OutlineColor = Color3.new(1, 1, 1)
+                highlight.OutlineTransparency = 0.5
+                highlight.Parent = character
+            else
+                highlight.OutlineColor = Color3.new(1, 1, 1)
+                highlight.OutlineTransparency = 0.5
+            end
+        end
+    end
+end)
+
+local tab2 = DrRayLibrary.newTab("Teleport", "ImageIdHere")
+
+tab2.newInput("Teleport player", "Huh???", function(text)
+    local player = game.Players.LocalPlayer
+    local targetPlayer = nil
+    local closestDistance = math.huge
+    for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+        if otherPlayer.Name:lower():find(text:lower()) then
+            local character = otherPlayer.Character
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                local distance = (player.Character.HumanoidRootPart.Position - character.HumanoidRootPart.Position).magnitude
+                if distance < closestDistance then
+                    closestDistance = distance
+                    targetPlayer = otherPlayer
+                end
+            end
+        end
+    end
+
+    if targetPlayer then
+        local targetPosition = targetPlayer.Character.HumanoidRootPart.Position
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+        print("Teleported to: " .. targetPlayer.Name)
+    else
+        print("No matching player found.")
+    end
+end)
+
+local tab3 = DrRayLibrary.newTab("Coordinates", "ImageIdHere")
+
+tab3.newButton("Координаты", "Copy player's coordinates.", function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local position = player.Character.HumanoidRootPart.Position
+        local coordText = string.format("X: %.2f, Y: %.2f, Z: %.2f", position.X, position.Y, position.Z)
+        -- Копирование координат в буфер обмена
+        setclipboard(coordText)
+        print("Coordinates copied: " .. coordText)
+    end
+end)
