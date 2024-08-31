@@ -1,0 +1,155 @@
+local DiscordLib = loadstring(game:HttpGet"https://git.homegu.com/raw/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("GalaxyHub")
+
+local serv = win:Server("Script", "")
+
+local mm2 = serv:Channel("mm2")
+
+mm2:Label("НЕКОТОРЫЕ СКРИПТЫ МОГУТ НЕ РАБОТАТЬ!!!")
+
+mm2:Button("Xhub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))() 
+end)
+
+mm2:Seperator()
+
+mm2:Button("LunarHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
+end)
+
+mm2:Button("EraHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Eblan19/875578/main/dolbaeb9867"))()
+end)
+
+mm2:Button("HughtLight hub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Free'))()
+end)
+
+mm2:Button("Kidachi", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))()
+end)
+
+mm2:Button("mm2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2 Admin Panel'),true))()
+end)
+
+mm2:Button("mm2]]]", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
+end)
+
+mm2:Button("AtherHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  script_key = "Add key here to auto verify"
+  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()
+end)
+
+mm2:Button("Obivon AUTO EXE V1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/katrina367/ScriptBlox-Projects/main/OblivionAutoEXEV1'))()
+end)
+
+mm2:Button("DarkHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("http://darkhub.xyz/remote-script.lua", true))()
+end)
+
+mm2:Button("YARHM", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
+end)
+
+mm2:Button("Farm Coin", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconLords/Random-Shit/main/mm2.lua"))()
+end)
+
+mm2:Button("mm99", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  repeat wait() until game.Players.LocalPlayer.Character
+url = "https://raw.githubusercontent.com/xennyy/Xenny-Ware/main/loader.lua"
+loadstring(game:HttpGet(url))()
+end)
+
+mm2:Button("DiamondHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fiveghanistan/DiamondHub/main/MurderMystery2"))()
+end)
+
+mm2:Button("AshbornnHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Ashborrn/AshborrnHub/main/AshbornnHubOfficial.lua",true))()
+end)
+
+mm2:Button("MarssHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/1andonlymars/MarsHub/main/MM2"))()
+end)
+
+mm2:Button("Nexus", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xvzups/nexus/main/loader.lua"))()
+end)
+
+mm2:Button("mm2 op", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoahCodeMaster/Mm2/main/Main.lua"))()
+end)
+
+mm2:Button("mm2 o", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/GuizzyisbackV2LOL/mm2solara/main/yayayya.lua'))()
+end)
+
+mm2:Button("FoggyHub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FOGOTY/mm2-piano-reborn/main/scr"))()
+end)
+
+mm2:Button("update", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/s-o-a-b/nexus/main/loadstring"))()
+end)
+
+mm2:Button("new mm2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zxclua/m/main/script"))()
+end)
+
+mm2:Button("private?", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zxclua/m/main/script"))()
+end)
+
+mm2:Button("Blindness", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/washingtontrichkid2/Newgay/main/MM2"))()
+end)
+
+mm2:Button("Overdrive", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+loadstring(game:HttpGet("https://overdrive-h.ohd.workers.dev/?d=loader"))()
+end)
+
+mm2:Button("op", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+getgenv().mainKey = "nil"
+
+local a, b, c, d = loadstring, request or http_request or (http and http.request) or (syn and syn.request), assert, tostring
+local baseURL, repo, filePath, user, branch= "https://raw.githubusercontent.com/", "Free", "CelestialHub", "Hydrosploit", "main"
+local g = baseURL .. user .. "/" .. repo .. "/" .. branch .. "/" .. filePath
+c(a and b, "Executor not Supported")
+a(b({Url = g .. "?" .. "\107\101\121\61" .. d(mainKey)}).Body)()
+end)
+
+mm2:Button("mm2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Drifter0507/GUIS/main/MURDER%20MYSTERY%202", true))();
+end)
