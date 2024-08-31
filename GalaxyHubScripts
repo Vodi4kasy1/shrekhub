@@ -158,7 +158,7 @@ local Cof = serv:Channel("Creatures Of Sonaria")
 
 Cof:Button("ye7s", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+  loadstring(game:HttpGet('https://lycan-x-hub.vercel.app/script/5233782396'))()
 end)
 
 Cof:Button("ye6s", function()
