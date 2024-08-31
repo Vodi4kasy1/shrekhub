@@ -153,3 +153,214 @@ mm2:Button("mm2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Drifter0507/GUIS/main/MURDER%20MYSTERY%202", true))();
 end)
+
+local Cof = serv:Channel("Creatures Of Sonaria")
+
+Cof:Button("ye7s", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+
+Cof:Button("ye6s", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  local a,b,c,d,e=loadstring,request or http_request or (http and http.request),assert,tonumber,"\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x79\x63\x61\x6e\x2d\x78\x2d\x68\x75\x62\x2e\x76\x65\x72\x63\x65\x6c\x2e\x61\x70\x70";c(a and b,"E\120e\99\117\116or no\116 su\112\112or\116e\100\33")a(b({Url=e.."\47\115c\114i\112\116/"..d(game.PlaceId)}).Body)()
+end)
+
+Cof:Button("y5es", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  getgenv().DroppedHearts = true
+
+task.spawn(function()
+while getgenv().DroppedHearts == true do
+task.wait(0.5)
+for i,v in pairs(workspace.DroppedHearts:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+end
+end
+end
+end)
+
+local function Teleport(A, B)
+local Deku
+for i, v in pairs(A) do
+if v.Name == "MotionTracker" then
+Deku = v
+end
+end
+for i, v in pairs(debug.getupvalues(require(Deku))) do
+if type(v) == "function" then
+if getinfo(v).name == "TeleportTo" then
+setupvalue(v, 3, B)
+end
+end
+end
+return A, B, nil, nil
+end
+
+Models = getloadedmodules()
+
+while task.wait() do
+for i,v in pairs(game:GetService("Workspace").DroppedHearts:GetChildren()) do
+if v:IsA("BasePart") then
+Teleport(Models,CFrame.new(v.Position - Vector3.new(0,0,0))) wait(0.5)
+end
+end
+end
+end)
+
+Cof:Button("y4es", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  local Ver, Script =
+pcall(game.HttpGet, game, "https://raw.githubusercontent.com/albinosenpai/creaturas2/main/gay2")
+if Ver then
+loadstring(Script)()
+else
+game:GetService("Players").LocalPlayer:Kick("Failed to connect to github")
+end
+end)
+
+Cof:Button("yes3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  local a,b,c,d,e=loadstring,request or http_request or (http and http.request),assert,tonumber,"\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x79\x63\x61\x6e\x2d\x78\x2d\x68\x75\x62\x2e\x76\x65\x72\x63\x65\x6c\x2e\x61\x70\x70";c(a and b,"E\120e\99\117\116or no\116 su\112\112or\116e\100\33")a(b({Url=e.."\47\115c\114i\112\116/"..d(game.PlaceId)}).Body)()
+end)
+
+Cof:Button("yes2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/creatureofsonoria"))()
+end)
+
+Cof:Button("yes1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  getgenv().DroppedHearts = true task.spawn(function() while getgenv().DroppedHearts == true do task.wait(0.5) for i,v in pairs(workspace.DroppedHearts:GetDescendants()) do if v:IsA("TouchTransmitter") then firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) end end end end) local function Teleport(A, B) local Deku for i, v in pairs(A) do if v.Name == "MotionTracker" then Deku = v end end for i, v in pairs(debug.getupvalues(require(Deku))) do if type(v) == "function" then if getinfo(v).name == "TeleportTo" then setupvalue(v, 3, B) end end end return A, B, nil, nil end Models = getloadedmodules() while task.wait() do for i,v in pairs(game:GetService("Workspace").DroppedHearts:GetChildren()) do if v:IsA("BasePart") then Teleport(Models,CFrame.new(v.Position - Vector3.new(0,0,0))) wait(0.5) end 
+end 
+end
+end)
+
+local bab = serv:Channel("build a boat for treasure")
+
+bab:Button("V.g.Hub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+
+bab:Button("huh", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubLoader.lua"))()
+end)
+
+bab:Button("hjb", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://astronomic.vercel.app"))()
+end)
+
+bab:Button("shis", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://pastebin.com/raw/Sr2nf07q"))()
+end)
+
+bab:Button("vegas?", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/SweatDestroyer/main/MainOperator.lua", true))()
+end)
+
+bab:Button("higlath", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
+end)
+
+bab:Button("You§✓", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  _G.UI_Theme = "White"; -- Normal , Red , Gold , Blue , White
+loadstring(game:HttpGet("https://luable.netlify.app/AlchemyHub/Luncher.script"))()
+end)
+
+bab:Button("oiub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/hecmax/hecmax/main/hjk"))()
+end)
+
+bab:Button("Yohh", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Gigachad%20hub%20V5'))()
+end)
+
+bab:Button("loppws", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Mana42138/Neverlose-UI/main/Scripts/Build%20A%20Boat.lua"))()
+
+-- Chest Lua: https://raw.githubusercontent.com/Mana42138/Neverlose-UI/main/Luas/Auto-Buy-Chests-Build-A-Boat.lua
+end)
+
+bab:Button("geytr", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptSkiddie69/pecter.lua/main/scripthub'))()
+end)
+
+bab:Button("yough", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Gigachad%20hub%20V5'))()
+end)
+
+bab:Button("iuth", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ImJosh66/OrangeX-Hub-V3-Rel/main/OrangeX%20V3%20Milvan.txt"))()
+end)
+
+bab:Button("getero", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Multi-Scripter-X/main/loader"))()
+end)
+
+bab:Button("ioe", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptSkiddie69/pecter.lua/main/scripthub'))()
+end)
+
+bab:Button("yvj", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Astronomic8/Astro/main/AstroLoader.lua"))()
+end)
+
+bab:Button("ir", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Loader.lua"))()
+end)
+
+bab:Button("help", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  ---------------------------------------------------------------------------------
+--[[Key (You Can Leave It Empty)]]--
+getgenv().keysys = ""--No Linkvertise/Work.ink, Key In Our Discord Server (https://discord.gg/XHS5WPxMrr)
+--[[Bar Position (OverToolbar, Top, Bottom, Default)]]--
+getgenv().BarPosition = "Top"
+--[[Loadstring]]--
+loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
+---------------------------------------------------------------------------------
+end)
+
+bab:Button("no)", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptSkiddie69/pecter.lua/main/scripthub'))()
+end)
+
+bab:Button("ggg", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+end)
+
+bab:Button("don5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MrPectable/MrPectable/main/MrPectable.lua"))() 
+end)
+
+bab:Button("Dopio", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/bababft", true))()
+end)
+
+bab:Button("youkii<]", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://gitlab.com/vugiakhiem2106/Universal/-/raw/main/ScriptLoader.lua"))()
+end)
