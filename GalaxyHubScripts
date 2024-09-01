@@ -4,11 +4,11 @@ local win = DiscordLib:Window("GalaxyHub")
 
 local skri = win:Server("Script", "")
 
-local cre = win:Server("Credits", "")
-
 local univ = win:Server("Universal", "")
 
 local myscri = win:Server("My Script", "")
+
+local cre = win:Server("Credits", "")
 
 local mm2 = skri:Channel("MM2")
 
@@ -23,6 +23,8 @@ local sp = skri:Channel("Slap Battles")
 local bf = skri:Channel("Blox Fruit")
 
 local dl = skri:Channel("Blade Ball")
+
+local meme = skri:Channel("Meme Sea")
 
 local un = univ:Channel("Universal")
 
@@ -293,6 +295,66 @@ end)
 bab:Button("25", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
+end)
+
+meme:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+end)
+
+meme:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/ElgatoHub/main/Loader.lua"))()
+end)
+
+meme:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/FrostLua/Krakles/main/ElgatoHub/Loader.lua'),true))()
+end)
+
+meme:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()
+end)
+
+meme:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-4-Meme-Sea-Zer0Hub-17187"))()
+end)
+
+meme:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-4-Meme-Sea-SOLORA-SCRIPT-17062"))()
+end)
+
+meme:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-4-Meme-Sea-Elgato-Hub-no-key-cracked-16804"))()
+end)
+
+meme:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/UPDATE-4-Meme-Sea-AutoFarm-And-More-15966"))()
+end)
+
+meme:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Meme-Sea-OP-Meme-Sea-script-6395"))()
+end)
+
+meme:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Meme-Sea-piece-inf-stat-6322"))()
+end)
+
+un:Button("Sky Hub", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Sky-Hub-16630"))()
+end)
+
+un:Button("Sky Hub Yes", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Sky-Hub-Yes-16108"))()
 end)
 
 bh:Button("1", function()
