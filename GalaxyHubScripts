@@ -4,7 +4,7 @@ local win = DiscordLib:Window("GalaxyHub")
 
 local serv = win:Server("Script", "")
 
-local mm2 = serv:Channel("mm2")
+local mm2 = serv:Channel("MM2")
 
 mm2:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -15,37 +15,39 @@ mm2:Seperator()
 
 mm2:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))() 
 end)
 
 mm2:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))() 
+  getgenv().mainKey = "nil";
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 end)
 
 mm2:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/s-0-a-b/nexus/main/loadstring"))()
 end)
 
 mm2:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/azeww/BEST-SCRIPT-ON-MM2/main/best%20script", true))()
+  loadstring(game:HttpGet('https://pastebin.com/raw/e89Mn4Ec'))()
 end)
 
 mm2:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurderMystery2"))() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/1andonlymars/MarsHub/main/MM2"))()
 end)
 
 mm2:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Thattsick/Symphony-Hub/main/Arrayfields"))()
 end)
 
 mm2:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))()
 end)
 
 mm2:Button("9", function()
@@ -55,82 +57,82 @@ end)
 
 mm2:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2_V2"))()
+  loadstring(game:HttpGet(("https://pastebin.com/raw/mT10xnt7"), true))()
 end)
 
 mm2:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(("https://pastebin.com/raw/mT10xnt7"), true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))()
 end)
 
 mm2:Button("12", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptemt/CE-Technologies/main/script', true))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/DrakainnnDL/Script/main/MurderrMystery2'))()
 end)
 
 mm2:Button("13", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurderMystery2"))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproootest/Unknown-MurderMystery2/main/FarmGui.lua'))()
 end)
 
 mm2:Button("14", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/eggs/main/MM2"))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptemt/CE-Technologies/main/script', true))()
 end)
 
 mm2:Button("15", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/pcallskeleton/CE-Technologies/main/script', true))()
+  loadstring(game:HttpGet('https://onemorehub.weinzspace.com/'))()
 end)
 
 mm2:Button("16", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptemt/CE-Technologies/main/script', true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconLords/Why-are-we-here-to-suffer/main/Bacon%20Hub%20Main%20Loader"))()
 end)
 
 mm2:Button("17", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/dqtixz/Universal-Script-Projeto/main/LKA%20By%20dqtixz%20Script"))();
+  loadstring(game:HttpGet("https://www.logixism.tech/AlphaX/loader.lua", true))()
 end)
 
 mm2:Button("18", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 end)
 
 mm2:Button("19", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug42O/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
 end)
 
 mm2:Button("20", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2_V2"))()
 end)
 
 mm2:Button("21", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
 end)
 
 mm2:Button("22", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://astronomic.vercel.app"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua", true))()
 end)
 
 mm2:Button("23", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/PomidorkaExlaL/MeoWHubMW/main/share'))();
+  loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 end)
 
 mm2:Button("24", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/loader.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
 end)
 
 mm2:Button("25", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Eblan19/875578/main/ERA-Hub"))()
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))
 end)
 
 local cof = serv:Channel("creatures of sonaria")
@@ -140,108 +142,12 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://lycan-x-hub.vercel.app/script/5233782396'))()
 end)
 
-mm2:Button("2", function()
+cof:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  ---BIRD HUB---
----Build a Boat to Survive!---
-if game.PlaceId == 6783611814 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/abuildaboat.lua"))()
-end
----Anime Dimension!---
-if game.PlaceId == 6938803436 or game.PlaceId == 6990129309 or game.PlaceId == 7338881230 or game.PlaceId == 7274690025 or game.PlaceId == 6990131029 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/animedimension.lua"))()
-end
----Anime Brawl---
-if game.PlaceId == 6310438798 or game.PlaceId == 7055554318 or game.PlaceId == 9246859091 or game.PlaceId == 8546307710 or game.PlaceId == 7121379340 or game.PlaceId == 8546306408 or game.PlaceId == 8556363849 or game.PlaceId == 8264725073 or game.PlaceId == 8675240536 or game.PlaceId == 8251159599 or game.PlaceId == 8374021908 or game.PlaceId == 9125057272 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/animebrawl"))()
-end
----Creature Of Sonoria---
-if game.PlaceId == 5233782396 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/creatureofsonoria"))()
-end
----Anime Fighter Simulator---
----Dungeon Quest---
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/creatureofsonoria"))()
 end)
 
-mm2:Button("3", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  local a,b,c,d,e=loadstring,request or http_request or (http and http.request),assert,tonumber,"\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x79\x63\x61\x6e\x2d\x78\x2d\x68\x75\x62\x2e\x76\x65\x72\x63\x65\x6c\x2e\x61\x70\x70";c(a and b,"E\120e\99\117\116or no\116 su\112\112or\116e\100\33")a(b({Url=e.."\47\115c\114i\112\116/"..d(game.PlaceId)}).Body)()
-end)
-
-mm2:Button("4", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  local Ver, Script =
-pcall(game.HttpGet, game, "https://raw.githubusercontent.com/albinosenpai/creaturas2/main/gay2")
-if Ver then
-loadstring(Script)()
-else
-game:GetService("Players").LocalPlayer:Kick("Failed to connect to github")
-end
-end)
-
-mm2:Button("5", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  -- Set everything to false to stop the farm
-
-getgenv().BellFarm = true
-getgenv().Bells = true
-getgenv().Trivia_scrambler = true
-
-local TriviaAnswer = "SubmitTriviaAnswer"
-local Answer = {
-["answer"] = "None"
-}
-local Scrambler = "ScramblerAnswer"
-local Answer1 = "Ani"
-
--- Touching all the Presents
-
-task.spawn(function()
-   while getgenv().BellFarm == true do
-       task.wait(0.5)
-   for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
-   if v.Name == "TouchInterest" and v.Parent.Name == "Present" then
-       firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-end
-end
-end
-end)
-
--- gives wrong answer to Trivia and Scrambler (you still get bells for wrong answers)
-
-task.spawn(function()
-   while getgenv().Trivia_scrambler == true do
-       task.wait(0.5)
-       for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui:GetChildren()) do
-       if v.Name == "Trivia" then
-       game:GetService("Players").LocalPlayer.RemoteFunction:InvokeServer(TriviaAnswer, Answer)
-       wait(1)
-       v:Destroy()
-       elseif v.Name == "Scramble" then
-       game:GetService("Players").LocalPlayer.RemoteEvent:FireServer(Scrambler, Answer1)
-       wait(1)
-       v:Destroy()
-       end
-       end
-end
-end)
-
--- Touch all the bells, can also be used to steal people's bells on the ground
-
-task.spawn(function()
-   while getgenv().Bells == true do
-       task.wait(0.5)
-       for i,v in pairs(workspace.DroppedWisps:GetDescendants()) do
-   if v:IsA("TouchTransmitter") then
-       firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-       firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
-end
-end
-end
-end)
-end)
-
-local bab = serv:Channel("build a boat for treasure")
+local bab = serv:Channel("creatures of sonaria")
 
 bab:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -250,1563 +156,340 @@ end)
 
 bab:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://pastebin.com/raw/Erp5dMPH'),true))() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ExyXyz/ExyGantenk/main/ExyBABFT"))()
 end)
 
 bab:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(("https://raw.githubusercontent.com/RawParmesan/Parmesan-Hub/main/Loader"),true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/Build-a-Boat-Premium-/main/OBFUSCATED.txt", true))()
 end)
 
 bab:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/ExyXyz/ExyGantenk/main/ExyBABFT"))()
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/BABFTPLAYERHUB/main/BABFTV2.lua'),true))()
 end)
 
 bab:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/Build-A-Boat'))()
 end)
 
 bab:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/Sr2nf07q"))() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Faacts/FactsHub/main/Loader",true))();
 end)
 
 bab:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://astronomic.vercel.app"))()
-end)
-
-bab:Button("1", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/SweatDestroyer/main/MainOperator.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/OopssGui/main/MainOopssGui.lua", true))()
 end)
 
 bab:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGetAsync("https://gitlab.com/vugiakhiem2106/Universal/-/raw/main/ScriptLoader.lua"))()
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/BABFT"),true))()
 end)
 
 bab:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/scripts/master/babft.lua"))()
 end)
 
 bab:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")() 
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
 end)
 
 bab:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  -- fart script
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/FartHub.lua"),true))()
+  loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()
 end)
 
 bab:Button("12", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
+end)
+
+bab:Button("13", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+
+bab:Button("14", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubLoader.lua"))()
+end)
+
+bab:Button("15", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://astronomic.vercel.app"))()
+end)
+
+bab:Button("16", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://pastebin.com/raw/Sr2nf07q"))()
+end)
+
+bab:Button("17", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/SweatDestroyer/main/MainOperator.lua", true))()
+end)
+
+bab:Button("18", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
+end)
+
+bab:Button("19", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGetAsync("https://gitlab.com/vugiakhiem2106/Universal/-/raw/main/ScriptLoader.lua"))()
+end)
+
+bab:Button("20", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   _G.UI_Theme = "White"; -- Normal , Red , Gold , Blue , White
 loadstring(game:HttpGet("https://luable.netlify.app/AlchemyHub/Luncher.script"))()
 end)
 
-bab:Button("13", function()
+bab:Button("21", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Gigachad%20hub%20V5'))()
 end)
 
-bab:Button("14", function()
+bab:Button("22", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Mana42138/Neverlose-UI/main/Scripts/Build%20A%20Boat.lua"))()
-
--- Chest Lua: https://raw.githubusercontent.com/Mana42138/Neverlose-UI/main/Luas/Auto-Buy-Chests-Build-A-Boat.lua
-end)
-
-bab:Button("15", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Amenteso/robloxscripts/main/Key.lua",true))() 
-end)
-
-bab:Button("16", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  ---------------------------------------------------------------------------------
---[[Key (You Can Leave It Empty)]]--
-getgenv().keysys = ""--No Linkvertise/Work.ink, Key In Our Discord Server (https://discord.gg/XHS5WPxMrr)
---[[Bar Position (OverToolbar, Top, Bottom, Default)]]--
-getgenv().BarPosition = "Top"
---[[Loadstring]]--
-loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
----------------------------------------------------------------------------------
-end)
-
-bab:Button("17", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-end)
-
-bab:Button("18", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/wheathub/main/main.lua"))()
-end)
-
-bab:Button("19", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/bababft", true))()
-end)
-
-bab:Button("20", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://gitlab.com/vugiakhiem2106/Universal/-/raw/main/ScriptLoader.lua"))()
-end)
-
-local yba = serv:Channel("You Bizzare Adventure")
-
-yba:Button("1", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
-end)
-
-yba:Button("2", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Eblan19/875578/main/dolbaeb9867"))()
-end)
-
-yba:Button("3", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Eblan19/875578/main/ERA-Hub"))()
-end)
-
-yba:Button("4", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
-end)
-
-yba:Button("5", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"))()
-end)
-
-yba:Button("6", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v2.lua"))()
-end)
-
-yba:Button("7", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/senS24t/sensnebunu/main/AutoSbrBysenS.lua"))()
-end)
-
-yba:Button("8", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/castycheat/script-your-bizarre/main/Protected%20(13).lua"))()
-end)
-
-yba:Button("9", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/kolgie/YBA-GUI/main/yba-gui-obfuscated.lua"))()
-end)
-
-yba:Button("10", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightKittenCat/script-idk/main/YBA.lua"))()
-end)
-
-yba:Button("11", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Historia00012/HISTORIAHUB/main/Histyhubb"))()
-end)
-
-yba:Button("12", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/Scripts2021/main/YBABKHACK"))()
-end)
-
-yba:Button("13", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightKittenCat/script-idk/main/YBA.lua"))()
-end)
-
-yba:Button("14", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet"https://raw.githubusercontent.com/NukeVsCity/hackscript123/main/gui")()
-end)
-
-yba:Button("15", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/Dupe-Yba.lua"))()
-end)
-
-local ars = serv:Channel("Arsenal")
-
-ars:Button("1", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  local args = {
-	["Arsenal"] = 286090429,
-	["BreakInStory"] = 3851622790,
-	["BreakInStoryGame"] = 4620170611,
-	["BedwarsLobby"] = 6872265039,
-	["BedwarsInGameCustom"] = 8444591321,
-	["BedwarsInGame"] = 6872274481,
-	[1] = 4623386862,
-	[2] = 5661005779,
-	[3] = 6516141723,
-	[4] = 6839171747
-}
-
-if game.PlaceId == args[3] or game.PlaceId == args[4] then
-	if game:IsLoaded() then
-		warn("[ServerScriptAPI]: Doors game has Loaded!")
-	end
-	if not game:IsLoaded() then
-		error("[ServerScriptAPI]: Doors hasent Loaded. Pls wait until its loaded")
-	end
-end
-
-if game.PlaceId == args.BreakInStory or game.PlaceId == args.BreakInStoryGame then
-	if game:IsLoaded() then
-		warn("[ServerScriptAPI]: Break in (Story) game has Loaded!")
-	end
-	if not game:IsLoaded() then
-		error("[ServerScriptAPI]: Break in (Story) hasent Loaded. Pls wait until its loaded")
-	end
-end
-
-if game.PlaceId == args.BedwarsLobby or game.PlaceId == args.BedwarsInGame then
-	if game:IsLoaded() then
-		warn("[ServerScriptAPI]: Bedwars game has Loaded!")
-	end
-	if not game:IsLoaded() then
-		error("[ServerScriptAPI]: Bedwars hasent Loaded. Pls wait until its loaded")
-	end
-end
-
-if game.PlaceId == args[1] or game.PlaceId == args[2] then
-	if game:IsLoaded() then
-		warn("[ServerScriptAPI]: Piggy game has Loaded!")
-	end
-	if not game:IsLoaded() then
-		error("[ServerScriptAPI]: Piggy hasent Loaded. Pls wait until its loaded")
-	end
-end
-
-if game.PlaceId == args.Arsenal then
-	if game:IsLoaded() then
-		warn("[ServerScriptAPI]: Arsenal has Loaded!")	
-	end
-	if not game:IsLoaded() then
-		error("[ServerScriptAPI]: Arsenal hasent Loaded. Pls wait until its loaded")
-	end
-end
-
-if game.PlaceId == args.Arsenal then
-	if game:IsLoaded() then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/SubnauticaLaserMain/script_2/main/286090429.lua", true))()
-	end
-end
-
-if game.PlaceId == args.BreakInStory or game.PlaceId == args.BreakInStoryGame then
-	if game:IsLoaded() then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/SubnauticaLaserMain/script_2/main/Break%20in%20Story%20Script.lua", true))()
-	end
-end
-
-if game.PlaceId == args.BedwarsLobby or game.PlaceId == args.BedwarsInGame then
-	if game:IsLoaded() then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/SubnauticaLaserMain/script_2/main/6872265039and8444591321.lua", true))()
-	end
-end
-
-if game.PlaceId == args[1] or game.PlaceId == args[2] then
-	if game:IsLoaded() then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/SubnauticaLaserMain/script_2/main/4623386862%20or%205661005779.lua", true))()
-	end	
-end
-
-if game.PlaceId == args[3] or game.PlaceId == args[4] then
-	if game:IsLoaded() then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/SubnauticaLaserMain/script_2/main/6839171747.lua", true))()
-	end
-end
-end)
-
-ars:Button("2", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/Gnuz4brw", true))()
-end)
-
-ars:Button("3", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/antipipka/roblox/main/Arsenal.lua"))()
-end)
-
-ars:Button("4", function()
-DiscordLib:Notification("Inject!", "Get funny<3 press E to aimbot", "GalaxyHub✓")
-  local aimbotActive = false
-local lockedPlayer = nil
-local maxLockDistance = 500 -- Set the maximum lock distance here
-local playerTeamNames = {
-    "TOC",
-    "TBC",
-    "TYC",
-    "TRC",
-    "TPC",
-    "TGC"
-}
-
-local function isVisible(targetPosition)
-    local camera = game.Workspace.CurrentCamera
-    local viewportPosition = camera:WorldToViewportPoint(targetPosition)
-
-    return viewportPosition.Z > 0
-end
-
-game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
-    if not gameProcessed then
-        if input.KeyCode == Enum.KeyCode.E then
-            aimbotActive = not aimbotActive
-            if aimbotActive then
-                local closestPlayer = nil
-                local closestDistance = math.huge
-
-                local myCharacter = game.Players.LocalPlayer.Character
-                local myPosition = myCharacter and myCharacter.PrimaryPart and myCharacter.PrimaryPart.Position
-
-                if myPosition then
-                    for _, player in pairs(game.Players:GetPlayers()) do
-                        local character = player.Character
-                        local characterPosition = character and character.PrimaryPart and character.PrimaryPart.Position
-
-                        if characterPosition and player ~= game.Players.LocalPlayer and isVisible(characterPosition) and not isSameTeam(player) then
-                            local distance = (myPosition - characterPosition).Magnitude
-                            if distance < closestDistance and distance <= maxLockDistance then
-                                closestDistance = distance
-                                closestPlayer = player
-                            end
-                        end
-                    end
-
-                    if closestPlayer then
-                        lockedPlayer = closestPlayer
-                    end
-                end
-            else
-                lockedPlayer = nil
-            end
-        elseif input.KeyCode == Enum.KeyCode.O then
-            aimbotActive = false
-            lockedPlayer = nil
-        end
-    end
-end)
-
-function isSameTeam(player)
-    local myPlayer = game.Players.LocalPlayer
-    local myTeam = myPlayer.Team
-
-    if myTeam and player.Team then
-        return myTeam.Name == player.Team.Name
-    end
-
-    return false
-end
-
-game:GetService("Players").PlayerRemoving:Connect(function(player)
-    if lockedPlayer == player then
-        lockedPlayer = nil
-    end
-end)
-
-game:GetService("RunService").Heartbeat:Connect(function()
-    if lockedPlayer and (not lockedPlayer.Character or not lockedPlayer.Character:FindFirstChild("Humanoid") or lockedPlayer.Character.Humanoid.Health <= 0) then
-        lockedPlayer = nil
-    end
-
-    if aimbotActive and lockedPlayer then
-        local myCharacter = game.Players.LocalPlayer.Character
-        local myPosition = myCharacter and myCharacter.PrimaryPart and myCharacter.PrimaryPart.Position
-
-        if myPosition then
-            local targetPosition = lockedPlayer.Character.PrimaryPart.Position
-            game:GetService("VirtualUser"):CaptureController()
-            mousemoveabs(targetPosition.X, targetPosition.Y)
-
-            local camera = game.Workspace.CurrentCamera
-            camera.CFrame = CFrame.new(camera.CFrame.Position, targetPosition)
-        end
-    end
-end)
-
-end)
-
-ars:Button("5", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/NullProtector/NullProtector.github.io/main/Osy%20%7BProtected%20By%20Moonsec%5D"))()
-end)
-
-ars:Button("6", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  --FLUXUS IS RECOMMEND TO AVOID ANY PROBLEMS!
---Site: https://argonhub.pages.dev
---Status: https://argonhub.statuspage.io/
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mcletshacks/ArgonHubV2/main/LoadFree/Main.lua", true))()
-end)
-
-ars:Button("huh", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/zT8Kbz5R"))()
-end)
-
-ars:Button("7", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
-end)
-
-ars:Button("8", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/DarkHub_V4/main/init", true))()
-end)
-
-ars:Button("9", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main"))()
-end)
-
-ars:Button("10", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://itots.tk/zaphub/ZapHubFreeVersion'))()
-end)
-
-ars:Button("11", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Amenteso/robloxscripts/main/Key.lua",true))()
-end)
-
-ars:Button("12", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Loadstring/main/arsenal4.lua"))()
-end)
-
-ars:Button("13", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MrPectable/MrPectable/main/MrPectable.lua"))()
-end)
-
-ars:Button("14", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://projectevo.xyz/v4/script.lua", true))();
-end)
-
-ars:Button("15", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/safasfasf", true))()
-end)
-
-ars:Button("16", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", true))()
-end)
-
-ars:Button("17", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://luxhub.cc/script.lua'))()
-end)
-
-ars:Button("18", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/VestraTech/Vestra/main/Roblox/loader.lua"))()
-end)
-
-ars:Button(19", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"), true))()
-end)
-
-ars:Button("20", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/imwifi/ProjectScuqan/main/main.lua", true))()
-end)
-
-ars:Button("21", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/F2B-HUB/F2B/main/HUB"))()
-end)
-
-ars:Button("22", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/Tiger-Hub/main/loader.lua"))()
-end)
-
-ars:Button("23", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/CavisOnStars/star-free/main/Star%20Hub%20Free.lua"), true))()
-end)
-
-ars:Button("24", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
-end)
-
-ars:Button("25", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroPublic/arsenal/main/Arsenal-obfuscated.lua'))()
-end)
-
-local brk = serv:Channel("BrookHaven")
-
-brk:Button("1", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
-end)
-
-brk:Button("2", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Spanish-HUB-V2-8258", true))() 
-end)
-
-brk:Button("3", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/err0r129/SerpenteXbetaByDefense129/main/Serpente.Scripts"))()
-end)
-
-brk:Button("4", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/od1ri/Brookhaven/main/v1.lua"))() 
-end)
-
-brk:Button("5", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()%60%60%60
-end)
-
-brk:Button("6", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/QMVVEMTn"))();
-end)
-
-brk:Button("7", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
-end)
-
-brk:Button("8", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
-end)
-
-brk:Button("9", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/exterauser/exteraHub/main/Loader", true))()
-end)
-
-brk:Button("10", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
-end)
-
-brk:Button("11", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(("https://raw.githubusercontent.com/RawParmesan/Parmesan-Hub/main/Loader"),true))()
-end)
-
-brk:Button("12", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/woopstwq/ssswool/main/77_ICLH0U4.lua'))()
-end)
-
-brk:Button("13", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))() 
-end)
-
-brk:Button("14", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
-end)
-
-brk:Button("15", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptSkiddie69/pecter.lua/main/scripthub'))()
 end)
 
-brk:Button("16", function()
+bab:Button("23", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/9N5gEWH3"))()
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
 end)
-
 
-brk:Button("17", function()
+bab:Button("24", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/000000001.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Astronomic8/Astro/main/AstroLoader.lua"))()
 end)
 
-brk:Button("18", function()
+bab:Button("25", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
+  loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
 end)
 
-brk:Button("19", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/000000001.lua"))()
-end)
+local bh = serv:Channel("Brookhaven")
 
-brk:Button("20", function()
+bh:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/mikeexc/Dance-Gui/main/Dance%20Gui", true))()
 end)
 
-brk:Button("21", function()
+bh:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
 
-brk:Button("22", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kederal/script.gg/main/loader.lua"))()
-end)
-
-brk:Button("23", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/ChillSoftworks/Houseg/main/Housegui"))()
-end)
-
-brk:Button("24", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-   loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/a8ef23a468af4ec5686fc6104066b501/raw/4dcc185733e69c358c32359fab1b4c27e578b4ee/ttt", true))()
-end)
-
-brk:Button("25", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet((‘https://raw.githubusercontent.com/CJStyles123/BrookhavenRP/main/CandyFarm’),true))()
-end)
-
-brk:Button("26", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(“https://gist.githubusercontent.com/testttbqwebg/adc0db730f5dfca0d8dbdb81f3b65391/raw/b0443888c4399af5a297cb1100a4749c65705711/qweqw”, true))()
-end)
-
-brk:Button("27", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-brk:Button("28", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
-end)
-
-brk:Button("29", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-end)
-
-brk:Button("30", function()
+bh:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/od1ri/Brookhaven/main/v1.lua"))()
 end)
 
-local serv = win:Server("Universal", "")
-
-local Universal = serv:Channel("Universal")
-
-Universal:Button("infYe", function()
+bh:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  loadstring(game:HttpGet("https://gist.githubusercontent.com/testttbqwebg/adc0db730f5dfca0d8dbdb81f3b65391/raw/b0443888c4399af5a297cb1100a4749c65705711/qweqw", true))()
 end)
 
-Universal:Button("Fling", function()
+bh:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://paste.ee/r/NTtmf", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ChillSoftworks/Houseg/main/Housegui"))()
 end)
 
-Universal:Button("CharByp", function()
+bh:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://gist.githubusercontent.com/lexsplorsex/b4b3b1243329327faec92f6953d4ed02/raw/a144202fc87db6493a109bf91a7cd14445e012ec/gistfile1.txt"))()
+  loadstring(game:HttpGet("https://pastebin.com/raw/QMVVEMTn"))();
 end)
 
-Universal:Button("What", function()
+bh:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
 end)
 
-Universal:Button("KRNLexecute", function()
+bh:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
+  local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/jf7iaXpH')))()
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local Window = OrionLib:MakeWindow({Name = "REDz HUB : "..gameName, HidePremium = false, SaveConfig = true, ConfigFolder = "teste"})
+
+local REDz = Window:MakeTab({Name = "Main",Icon = "rbxassetid://13687632207",PremiumOnly = false})
+
+REDz:AddButton({Name = "REDz HUB v3.2.2 In English",Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/HR/main/REDzHUBeng"))()
+end})
+
+REDz:AddButton({Name = "REDz HUB v3.2.2 em PortuguÃªs",Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+end})
 end)
 
-Universal:Button("ChatBayp", function()
+bh:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://gist.githubusercontent.com/lexsplorsex/c9d9469a5787ed86a78473c0ad7f4c4e/raw/200a170c4df91d83f6245934ddb70b3c14d339ec/gistfile1.txt"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
 end)
 
-Universal:Button("Rspy", function()
+bh:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/un_Haxker6666666", true))()
 end)
 
-Universal:Button("TpPlayer", function()
-DiscordLib:Notification("Inject!", "Get funny<3 press H to use", "GalaxyHub✓")
-  local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-local Window = OrionLib:MakeWindow({Name = "Simple Teleport", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
-local Tab = Window:MakeTab({
-	Name = "TP To Players",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "Teleport:"
-})
-
-local plrs = game.Players
-
--- Fetch all player names
-local playerNames = {}
-local players = plrs:GetPlayers()
-
-for _, player in ipairs(players) do
-    table.insert(playerNames, player.Name)
-end
-
-Tab:AddDropdown({
-    Name = "Players",
-    Default = playerNames[1] or "No Players",
-    Options = playerNames,
-    Callback = function(selectedplrName)
-        local targetPlayer = plrs:FindFirstChild(selectedplrName)
-        
-        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
-            -- Teleporting your character to the selected player's position
-            local targetPosition = targetPlayer.Character.HumanoidRootPart.Position
-            local localPlayerRoot = plrs.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-            
-            if localPlayerRoot then
-                localPlayerRoot.CFrame = CFrame.new(targetPosition)
-            end
-        end
-        print(selectedplrName)
-    end    
-})
-end)
-
-
-Universal:Button("TrahsTalk", function()
+bh:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  local words = {
-    "I didn't ask",
-    "sonned",
-    "bad",
-    "even a grandma wouldn't love you",
-    ":clown:",
-    "gg = get good",
-    "im just better",
-    "my gaming chair is just better",
-    "clip me",
-    "skill",
-    ":Skull:",
-    "go play adopt me",
-    "go play brookhaven",
-    "omg you are so good :screm:",
-    "awesome",
-    "you built like gru",
-    "fridge",
-    "do not bully pliisss :sobv:",
-    "it was your lag ofc",
-    "fly high",
-    "*cough* *cough*",
-    "son",
-    "already mad?",
-    "please don't report :sobv:",
-    "sob harder",
-    "sopt be neamn to me :sob :sob: sov:",
-
-}
-
-local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
-local player = game.Players.LocalPlayer
-local keybind = "J" -- change hotkey here
-
- player:GetMouse().KeyDown:connect(function(key)
-        if key == keybind then
-            event:FireServer(words[math.random(1,#words)], "ALL")
-        end
-    end)
-
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
 end)
 
-Universal:Button("Esp/more", function()
+bh:Button("12", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://pastebin.com/raw/y94Ejz3B'),true))();
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/spacvehubloader"))()
 end)
 
-Universal:Button("aim", function()
+bh:Button("13", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  local Camera = workspace.CurrentCamera
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
-local TweenService = game:GetService("TweenService")
-local LocalPlayer = Players.LocalPlayer
-local Holding = false
-
-_G.AimbotEnabled = true
-_G.TeamCheck = false -- If set to true then the script would only lock your aim at enemy team members.
-_G.AimPart = "Head" -- Where the aimbot script would lock at.
-_G.Sensitivity = 0 -- How many seconds it takes for the aimbot script to officially lock onto the target's aimpart.
-
-_G.CircleSides = 64 -- How many sides the FOV circle would have.
-_G.CircleColor = Color3.fromRGB(255, 255, 255) -- (RGB) Color that the FOV circle would appear as.
-_G.CircleTransparency = 0.7 -- Transparency of the circle.
-_G.CircleRadius = 80 -- The radius of the circle / FOV.
-_G.CircleFilled = false -- Determines whether or not the circle is filled.
-_G.CircleVisible = true -- Determines whether or not the circle is visible.
-_G.CircleThickness = 0 -- The thickness of the circle.
-
-local FOVCircle = Drawing.new("Circle")
-FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
-FOVCircle.Radius = _G.CircleRadius
-FOVCircle.Filled = _G.CircleFilled
-FOVCircle.Color = _G.CircleColor
-FOVCircle.Visible = _G.CircleVisible
-FOVCircle.Radius = _G.CircleRadius
-FOVCircle.Transparency = _G.CircleTransparency
-FOVCircle.NumSides = _G.CircleSides
-FOVCircle.Thickness = _G.CircleThickness
-
-local function GetClosestPlayer()
-	local MaximumDistance = _G.CircleRadius
-	local Target = nil
-
-	for _, v in next, Players:GetPlayers() do
-		if v.Name ~= LocalPlayer.Name then
-			if _G.TeamCheck == true then
-				if v.Team ~= LocalPlayer.Team then
-					if v.Character ~= nil then
-						if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
-							if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
-								local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
-								local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
-								
-								if VectorDistance < MaximumDistance then
-									Target = v
-								end
-							end
-						end
-					end
-				end
-			else
-				if v.Character ~= nil then
-					if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
-						if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
-							local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
-							local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
-							
-							if VectorDistance < MaximumDistance then
-								Target = v
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-
-	return Target
-end
-
-UserInputService.InputBegan:Connect(function(Input)
-    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
-        Holding = true
-    end
+  loadstring(game:HttpGet("https://pastebin.com/raw/9N5gEWH3"))()
 end)
 
-UserInputService.InputEnded:Connect(function(Input)
-    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
-        Holding = false
-    end
-end)
-
-RunService.RenderStepped:Connect(function()
-    FOVCircle.Position = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
-    FOVCircle.Radius = _G.CircleRadius
-    FOVCircle.Filled = _G.CircleFilled
-    FOVCircle.Color = _G.CircleColor
-    FOVCircle.Visible = _G.CircleVisible
-    FOVCircle.Radius = _G.CircleRadius
-    FOVCircle.Transparency = _G.CircleTransparency
-    FOVCircle.NumSides = _G.CircleSides
-    FOVCircle.Thickness = _G.CircleThickness
-
-    if Holding == true and _G.AimbotEnabled == true then
-        TweenService:Create(Camera, TweenInfo.new(_G.Sensitivity, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {CFrame = CFrame.new(Camera.CFrame.Position, GetClosestPlayer().Character[_G.AimPart].Position)}):Play()
-    end
-end)
-end)
-
-Universal:Button("AudioLogger", function()
+bh:Button("14", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  aa = game:GetObjects("rbxassetid://01997056190")[1]
-aa.Parent = game.CoreGui
-wait(0.2)
-GUI = aa.PopupFrame.PopupFrame
-pos = 0
-
-ignore = {
- "rbxasset://sounds/action_get_up.mp3",
- "rbxasset://sounds/uuhhh.mp3",
- "rbxasset://sounds/action_falling.mp3",
- "rbxasset://sounds/action_jump.mp3",
- "rbxasset://sounds/action_jump_land.mp3",
- "rbxasset://sounds/impact_water.mp3",
- "rbxasset://sounds/action_swim.mp3",
- "rbxasset://sounds/action_footsteps_plastic.mp3"
-}
-
-GUI.Close.MouseButton1Click:connect(function()
- GUI:TweenSize(UDim2.new(0, 360, 0, 0),"Out","Quad",0.5,true) wait(0.6)
- GUI.Parent:TweenSize(UDim2.new(0, 0, 0, 20),"Out","Quad",0.5,true) wait(0.6)
- aa:Destroy()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
 
-local min = false
-GUI.Minimize.MouseButton1Click:connect(function()
- if min == false then
-  GUI:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) min = true
- else
-  GUI:TweenSize(UDim2.new(0, 360, 0, 260),"Out","Quad",0.5,true) min = false
- end
-end)
-
-function printTable(tbl)
- if type(tbl) ~= 'table' then return nil end
- local depthCount = -15
-
- local function run(val, inPrefix)
-  depthCount = depthCount + 15
-  -- if inPrefix then print(string.rep(' ', depthCount) .. '{') end
-  for i,v in pairs(val) do
-   if type(v) == 'table' then
-    -- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {')
-    GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {'
-    run(v, false)
-    wait()
-   else
-    -- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v))
-    GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v)
-    wait()
-   end
-  end
-  -- print(string.rep(' ', depthCount) .. '}')
-  depthCount = depthCount - 15
- end
- run(tbl, true)
-end
-
-function refreshlist()
- pos = 0
- GUI.Logs.CanvasSize = UDim2.new(0,0,0,0)
- for i,v in pairs(GUI.Logs:GetChildren()) do
-  v.Position = UDim2.new(0,0,0, pos)
-  GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-  pos = pos+20
- end
-end
-
-function FindTable(Table, Name)
- for i,v in pairs(Table) do
-  if v == Name then
-   return true
-  end end
- return false
-end
-
-function writefileExploit()
- if writefile then
-  return true
- end
-end
-
-writeaudio = {}
-running = false
-GUI.SS.MouseButton1Click:connect(function()
- if writefileExploit() then
-  if running == false then
-   GUI.Load.Visible = true running = true
-   GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
-   for _, child in pairs(GUI.Logs:GetChildren()) do
-    if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-     if bttn.BackgroundTransparency == 0 then
-      writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
-     end
-    end
-   end
-   GUI.Store.Visible = true
-   printTable(writeaudio)
-   wait(0.2)
-   local filename = 0
-   local function write()
-    local file
-    pcall(function() file = readfile("Audios"..filename..".txt") end)
-    if file then
-     filename = filename+1
-     write()
-    else
-     local text = tostring(GUI.Store.Text)
-     text = text:gsub('\n', '\r\n')
-     writefile("Audios"..filename..".txt", text)
-    end
-   end
-   write()
-   for rep = 1,10 do
-   GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-   wait(0.05)
-   end
-   GUI.Load.Visible = false
-   GUI.Load.BackgroundTransparency = 0
-   GUI.Load.Size = UDim2.new(0, 0, 0, 20)
-   running = false
-   GUI.Store.Visible = false
-   GUI.Store.Text = ''
-   writeaudio = {}
-   game:FindService('StarterGui'):SetCore('SendNotification', {
-    Title = 'Audio Logger',
-    Text = 'Saved audios\n(Audios'..filename..'.txt)',
-    Icon = 'http://www.roblox.com/asset/?id=176572847',
-    Duration = 5,
-   })
-  end
- else
-  game:FindService('StarterGui'):SetCore('SendNotification', {
-   Title = 'Audio Logger',
-   Text = 'Exploit cannot writefile :(',
-   Icon = 'http://www.roblox.com/asset/?id=176572847',
-   Duration = 5,
-  })
- end
-end)
-
-GUI.SA.MouseButton1Click:connect(function()
- if writefileExploit() then
-  if running == false then
-   GUI.Load.Visible = true running = true
-   GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
-   for _, child in pairs(GUI.Logs:GetChildren()) do
-    writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
-   end
-   GUI.Store.Visible = true
-   printTable(writeaudio)
-   wait(0.2)
-   local filename = 0
-   local function write()
-    local file
-    pcall(function() file = readfile("Audios"..filename..".txt") end)
-    if file then
-     filename = filename+1
-     write()
-    else
-     local text = tostring(GUI.Store.Text)
-     text = text:gsub('\n', '\r\n')
-     writefile("Audios"..filename..".txt", text)
-    end
-   end
-   write()
-   for rep = 1,10 do
-    GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-    wait(0.05)
-   end
-   GUI.Load.Visible = false
-   GUI.Load.BackgroundTransparency = 0
-   GUI.Load.Size = UDim2.new(0, 0, 0, 20)
-   running = false
-   GUI.Store.Visible = false
-   GUI.Store.Text = ''
-   writeaudio = {}
-   game:FindService('StarterGui'):SetCore('SendNotification', {
-    Title = 'Audio Logger',
-    Text = 'Saved audios\n(Audios'..filename..'.txt)',
-    Icon = 'http://www.roblox.com/asset/?id=176572847',
-    Duration = 5,
-   })
-  end
- else
-  game:FindService('StarterGui'):SetCore('SendNotification', {
-   Title = 'Audio Logger',
-   Text = 'Exploit cannot writefile :(',
-   Icon = 'http://www.roblox.com/asset/?id=176572847',
-   Duration = 5,
-  })
- end
-end)
-
-selectedaudio = nil
-function getaudio(place)
- if running == false then
-  GUI.Load.Visible = true running = true
-  GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
-  for _, child in pairs(place:GetDescendants()) do
-   spawn(function()
-    if child:IsA("Sound") and not GUI.Logs:FindFirstChild(child.SoundId) and not FindTable(ignore,child.SoundId) then
-     local id = string.match(child.SoundId, "rbxasset://sounds.+") or string.match(child.SoundId, "&hash=.+") or string.match(child.SoundId, "%d+")
-     if id ~= nil then  
-      local newsound = GUI.Audio:Clone()
-      if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
-       id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
-       newsound.ImageButton.Image = 'rbxassetid://1453863294'
-      end
-      newsound.Parent = GUI.Logs
-      newsound.Name = child.SoundId
-      newsound.Visible = true
-      newsound.Position = UDim2.new(0,0,0, pos)
-      GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-      pos = pos+20
-      local function findname()
-       Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
-      end
-      local audioname = 'error'
-      local success, message = pcall(findname)
-      if success then
-          newsound.TextLabel.Text = Asset.Name
-       audioname = Asset.Name
-      else
-       newsound.TextLabel.Text = child.Name
-       audioname = child.Name
-      end
-      local data = Instance.new('StringValue') data.Parent = newsound data.Value = child.SoundId data.Name = 'ID'
-      local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
-      local soundselected = false
-      newsound.ImageButton.MouseButton1Click:Connect(function()
-       if GUI.Info.Visible ~= true then
-        if soundselected == false then soundselected = true
-         newsound.ImageButton.BackgroundTransparency = 0
-        else soundselected = false
-         newsound.ImageButton.BackgroundTransparency = 1
-        end
-       end
-      end)
-      newsound.Click.MouseButton1Click:Connect(function()
-       if GUI.Info.Visible ~= true then
-        GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. child.SoundId .. "\n\nWorkspace Name: " .. child.Name
-        selectedaudio = child.SoundId
-        GUI.Info.Visible = true
-       end
-      end)
-     end
-    end
-   end)
-  end
- end
- for rep = 1,10 do
-  GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-  wait(0.05)
- end
- GUI.Load.Visible = false
- GUI.Load.BackgroundTransparency = 0
- GUI.Load.Size = UDim2.new(0, 0, 0, 20)
- running = false
-end
-
-GUI.All.MouseButton1Click:connect(function() getaudio(game)end)
-GUI.Workspace.MouseButton1Click:connect(function() getaudio(workspace)end)
-GUI.Lighting.MouseButton1Click:connect(function() getaudio(game:GetService('Lighting'))end)
-GUI.SoundS.MouseButton1Click:connect(function() getaudio(game:GetService('SoundService'))end)
-GUI.Clr.MouseButton1Click:connect(function()
- for _, child in pairs(GUI.Logs:GetChildren()) do
-  if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-   if bttn.BackgroundTransparency == 1 then
-    bttn.Parent:Destroy()
-    refreshlist()
-   end
-  end
- end
-end)
-GUI.ClrS.MouseButton1Click:connect(function()
- for _, child in pairs(GUI.Logs:GetChildren()) do
-  if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-   if bttn.BackgroundTransparency == 0 then
-    bttn.Parent:Destroy()
-    refreshlist()
-   end
-  end
- end
-end)
-autoscan = false
-GUI.AutoScan.MouseButton1Click:connect(function()
- if autoscan == false then autoscan = true
-  GUI.AutoScan.BackgroundTransparency = 0.5
-  game:FindService('StarterGui'):SetCore('SendNotification', {
-   Title = 'Audio Logger',
-   Text = 'Auto Scan ENABLED',
-   Icon = 'http://www.roblox.com/asset/?id=176572847',
-   Duration = 5,
-  })
- else autoscan = false
-  GUI.AutoScan.BackgroundTransparency = 0
-  game:FindService('StarterGui'):SetCore('SendNotification', {
-   Title = 'Audio Logger',
-   Text = 'Auto Scan DISABLED',
-   Icon = 'http://www.roblox.com/asset/?id=176572847',
-   Duration = 5,
-  })
- end
-end)
-
-game.DescendantAdded:connect(function(added)
- wait()
- if autoscan == true and added:IsA('Sound') and not GUI.Logs:FindFirstChild(added.SoundId) and not FindTable(ignore,added.SoundId) then
-  local id = string.match(added.SoundId, "rbxasset://sounds.+") or string.match(added.SoundId, "&hash=.+") or string.match(added.SoundId, "%d+")
-  if id ~= nil then  
-   local newsound = GUI.Audio:Clone()
-    if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
-     id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
-     newsound.ImageButton.Image = 'rbxassetid://1453863294'
-    end
-    local scrolldown = false
-    newsound.Parent = GUI.Logs
-    newsound.Name = added.SoundId
-    newsound.Visible = true
-    newsound.Position = UDim2.new(0,0,0, pos)
-    if GUI.Logs.CanvasPosition.Y == GUI.Logs.CanvasSize.Y.Offset - 230 then
-     scrolldown = true
-    end
-    GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-    pos = pos+20
-    local function findname()
-     Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
-    end
-    local audioname = 'error'
-    local success, message = pcall(findname)
-    if success then
-        newsound.TextLabel.Text = Asset.Name
-     audioname = Asset.Name
-    else 
-     newsound.TextLabel.Text = added.Name
-     audioname = added.Name
-    end
-    local data = Instance.new('StringValue') data.Parent = newsound data.Value = added.SoundId data.Name = 'ID'
-    local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
-    local soundselected = false
-    newsound.ImageButton.MouseButton1Click:Connect(function()
-     if GUI.Info.Visible ~= true then
-      if soundselected == false then soundselected = true
-       newsound.ImageButton.BackgroundTransparency = 0
-      else soundselected = false
-       newsound.ImageButton.BackgroundTransparency = 1
-      end
-     end
-    end)
-    newsound.Click.MouseButton1Click:Connect(function()
-     if GUI.Info.Visible ~= true then
-      GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. added.SoundId .. "\n\nWorkspace Name: " .. added.Name
-      selectedaudio = added.SoundId
-      GUI.Info.Visible = true
-     end
-    end)
-    --230'
-   if scrolldown == true then
-    GUI.Logs.CanvasPosition = Vector2.new(0, 9999999999999999999999999999999999999999999, 0, 0)
-   end
-  end
- end
-end)
-
-GUI.Info.Copy.MouseButton1Click:Connect(function()
- if pcall(function() Synapse:Copy(selectedaudio) end) then 
- else
-  local clip = setclipboard or Clipboard.set
-  clip(selectedaudio)
- end
- game:FindService('StarterGui'):SetCore('SendNotification', {
-  Title = 'Audio Logger',
-  Text = 'Copied to clipboard',
-  Icon = 'http://www.roblox.com/asset/?id=176572847',
-  Duration = 5,
- })
-end)
-
-GUI.Info.Close.MouseButton1Click:Connect(function()
- GUI.Info.Visible = false
- for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
-  if sound.Name == 'SampleSound' then
-   sound:Destroy()
-  end
- end
- GUI.Info.Listen.Text = 'Listen'
-end)
-
-GUI.Info.Listen.MouseButton1Click:Connect(function()
- if GUI.Info.Listen.Text == 'Listen' then
-  local samplesound = Instance.new('Sound') samplesound.Parent = game:GetService('Players').LocalPlayer.PlayerGui
-  samplesound.Looped = true samplesound.SoundId = selectedaudio samplesound:Play() samplesound.Name = 'SampleSound'
-  samplesound.Volume = 5
-  GUI.Info.Listen.Text = 'Stop'
- else
-  for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
-   if sound.Name == 'SampleSound' then
-    sound:Destroy()
-   end
-  end
-  GUI.Info.Listen.Text = 'Listen'
- end
-end)
-
-function drag(gui)
- spawn(function()
-  local UserInputService = game:GetService("UserInputService")
-  local dragging
-  local dragInput
-  local dragStart
-  local startPos
-  local function update(input)
-   local delta = input.Position - dragStart
-   gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), "InOut", "Quart", 0.04, true, nil) 
-  end
-  gui.InputBegan:Connect(function(input)
-   if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-   dragging = true
-   dragStart = input.Position
-   startPos = gui.Position
-  input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
-gui.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        dragInput = input
-    end
-end)
-UserInputService.InputChanged:Connect(function(input)
-    if input == dragInput and dragging then
-        update(input)
-    end
-end)
-end)
-end
-drag(aa.PopupFrame)
-end)
-
-Universal:Button("FreezeGui", function()
+bh:Button("15", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/SavaLava9/FEFreeze/main/FEFreeze.txt"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
 end)
 
-Universal:Button("TargetPlayer", function()
+local sp = serv:Channel("Slap Battles")
+
+sp:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/DraWatX/Test_01/main/PT.lua'),true))()
+  loadstring(game:HttpGet('https://rawscripts.net/raw/Slap-Battles-KykyryzoB-Hub-SB-9008'))()
 end)
 
-Universal:Button("Hub", function()
+sp:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/KaterHub.Lua"))()
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
 end)
 
-Universal:Button("LyrisBot", function()
+sp:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/lyricsBot/main/singer.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
 end)
 
-Universal:Button("GhostHub", function()
+sp:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Testerhubplayer/Slap-battle/main/Shukuchi_slap_farm_V3.lua"))()
 end)
 
-Universal:Button("Dev.Tools", function()
+sp:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://weinzspace.com/revamp.lua'))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ChaosBringerTeam/fytafjkgawjkfgwakijfgawghio8u/main/vqKMWY6x9vSDxzpjhHWTwd8FEaKtIFOD"))()
 end)
 
-Universal:Button("Spectate/Teleport", function()
+sp:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://weinzspace.com/revamp.lua'))()
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Slap-Battles-Open-source-for-9484", true))()
 end)
 
-Universal:Button("AdminPanel", function()
+sp:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://pastefy.app/Oic24KzG/raw'),true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/WinterDinder/Slap-Battle-Simulator/main/Main", true))()
 end)
 
-Universal:Button("Hitbox", function()
+sp:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/CreepHubOP/CreepHub/main/Script"))()
 end)
 
-Universal:Button("Aim/Esp", function()
+sp:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  l-- ---------------------------------------- --
---	ENVISION AIMBOT
---
---	By			EnvisionExploits
---	Contributors	Rylen
---
---	Version		VER-2, 0-31
---	Last edited	9/7/23 8:03 PM
---	Last added	[release]
--- ---------------------------------------- --
-
---! TO USE AIMBOT HOLD THE RIGHT MOUSE BUTTON (AIM BUTTON / MOUSE BUTTON 2)
-
-_VERSION, _CONFIG = "VER-2, 0-31", {};
-
-_CONFIG.General_AddGuiForConfig = true; -- not added yet
-_CONFIG.General_SaveConfig = true;
-_CONFIG.General_LoadConfigIfSaved = false;
-
-_CONFIG.Keybind_Aimbot = Enum.KeyCode.F;
-_CONFIG.Keybind_Tags = Enum.KeyCode.G;
-_CONFIG.Keybind_Highlights = Enum.KeyCode.T;
-_CONFIG.Keybind_Tracers = Enum.KeyCode.X;
-_CONFIG.Keybind_BoundingBox = Enum.KeyCode.V;
-_CONFIG.Keybind_Uninject = Enum.KeyCode.B;
-
-_CONFIG.General_Aimbot_Toggled = true;
-_CONFIG.General_Aimbot_TargetPart = "Head";
-_CONFIG.General_Aimbot_FreeForAll = true;
-_CONFIG.General_Aimbot_TargetPartHitChance = 100; -- change name
-_CONFIG.General_Aimbot_TargetPartHitChance_RefreshChancesTime = 1; -- seconds
-_CONFIG.General_Aimbot_TargetPartHitChance_WhenUnlucky_AimToLimbs = false;
-_CONFIG.General_Aimbot_TargetPartHitChance_WhenUnlucky_AimToAnOffset = true;
-_CONFIG.General_Aimbot_PredictPlayers = true;
-_CONFIG.General_Aimbot_PredictPlayers_DiffuseFactor = 280;
-_CONFIG.General_Aimbot_PredictPlayers_InvolveDistanceInEquation = true;
-_CONFIG.General_Aimbot_CheckIfTargetIsBehindWalls = false; -- recommended if triggerbot is enabled
-_CONFIG.General_Aimbot_UseMouseHitForLockingOnPlayers = false; -- false: otherwise it will get the closest person to mouse 2d position
-_CONFIG.General_Aimbot_AimToClosestPlayer = false;
-_CONFIG.General_Aimbot_CheckForFirstPerson = true;
-_CONFIG.General_Aimbot_AimToAnotherPlayerAfterTargetIsEliminated = true;
-_CONFIG.General_Aimbot_Smoothness = 0;
-
-_CONFIG.General_Aimbot_TriggerBot = false;
-_CONFIG.General_Aimbot_TriggerBot_ClicksPerSecond = 10;
-
-_CONFIG.Miscellaneous_AllowModificationsBasedOnGame = true;
-
-_CONFIG.Visuals_Color_Rainbow = true;
-_CONFIG.Visuals_Color_Rainbow_Speed = 30;
-_CONFIG.Visuals_Color_Main = Color3.fromRGB(156, 156, 255);
-_CONFIG.Visuals_Color_Main_OverrideTeamColors = false;
-
-_CONFIG.Visuals_Tags_Toggled = true;
-_CONFIG.Visuals_Tags_ShowHealth = false;
-_CONFIG.Visuals_Tags_ShowDistance = true;
-_CONFIG.Visuals_Tags_UseDisplayName = true;
-
-_CONFIG.Visuals_Highlights_Toggled = false;
-
-_CONFIG.Visuals_Tracers_Toggled = true;
-_CONFIG.Visuals_Tracers_FadeColorBasedOnDistance = true;
-_CONFIG.Visuals_Tracers_FakeCircle_PositionX = "middle"; -- left, middle, right
-_CONFIG.Visuals_Tracers_FakeCircle_PositionY = "bottom"; -- top, middle, bottom 
-_CONFIG.Visuals_Tracers_FakeCircle_Radius = 30;
-
-_CONFIG.Visuals_BoundingBox_Toggled = true;
-_CONFIG.Visuals_BoundingBox_Color_MakeRainbow = false;
-_CONFIG.Visuals_BoundingBox_Color = Color3.fromRGB(255, 255, 255);
-_CONFIG.Visuals_BoundingBox_Color_UseTeamColor = true;
-_CONFIG.Visuals_BoundingBox_Color_TargetPart = _CONFIG.Visuals_Color_Main;
-_CONFIG.Visuals_BoundingBox_ChangeModesBasedOnDistanceWithPlayer = false;
-_CONFIG.Visuals_BoundingBox_Mode = "box"; -- 3d, 2d, box
-_CONFIG.Visuals_BoundingBox_Mode_2d_Design = 1; -- 1: normal, 2: skeleton
-_CONFIG.Visuals_BoundingBox_Mode_Box_Design = 2; -- 1: box, 2: scifi 1, 3: scifi 2
-_CONFIG.Visuals_BoundingBox_Mode_Box_HealthBar_Showing = true;
-_CONFIG.Visuals_BoundingBox_Mode_Box_HealthBar_Position = "right"; -- left, right, top, bottom
-_CONFIG.Visuals_BoundingBox_Mode_Box_HealthBar_MakeProgressBar = true;
-_CONFIG.Visuals_BoundingBox_Mode_Box_HealthBar_AddBackground = true;
-_CONFIG.Visuals_BoundingBox_PredictionCircle_Showing = true;
-_CONFIG.Visuals_BoundingBox_PredictionCircle_Color = Color3.fromRGB(255, 255, 0);
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Rylvns/EnvisionExploits/master/general-scripts/Aimbot/source.lua"))();
+  loadstring(game:HttpGet("https://pastebin.com/raw/ujazYyfG"))();
 end)
 
-Universal:Button("HttpSpy", function()
+sp:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(request({Url = "https://seere.vip/cracks/httpspy.lua"}).Body)()
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheScriptMaster1/ScriptMaster-Hub/main/scriptmasterhub.lua')))()
 end)
 
-Universal:Button("FreeAvarar", function()
+local bf = serv:Channel("Blox Fruit")
+
+bf:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/fakelimitedsv2/main/fakelimitedsv2", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/BasementHub/BH-Blox-fruit/main/W-Azure-V3"))()
 end)
 
-Universal:Button("Fly/God", function()
+bf:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  --[[
-
--- Current version : 1.8.9
--- UPD Date : 12/09/2023
--- UI Models : 56.89 - 92.01
--- Smooth Models : 34.4 - 59.0
--- Volt Support : 6B - 20B (BIT-SUPPORT)
--- Byfron Bypass : Clients-64B (2.593.656)
--- Size Scripts : IN-Volt (3MB)
-
-]]--
-
-loadstring(game:HttpGet("https://freenote.biz/raw/necDCYOXM7"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/AppleHubOnTop/main/Loader.lua"))() 
 end)
 
-Universal:Button("InfJump/more", function()
+bf:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/JwGf73hp"))()
+  getgenv().Team = "Pirates" loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))() 
 end)
 
-Universal:Button("FeGui", function()
+bf:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\103\48\48\108\88\112\108\111\105\116\101\114\47\103\48\48\108\88\112\108\111\105\116\101\114\47\109\97\105\110\47\70\101\37\50\48\98\121\112\97\115\115\34\44\32\116\114\117\101\41\41\40\41\10")()
+  _G.Language = "EN" -- EN or TH
+v=1;loadstring(game:HttpGet("https://alchemyhub.xyz/v2"))() 
 end)
 
-Universal:Button("RTX", function()
+bf:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://pastebin.com/raw/JwGf73hp"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md"))() 
 end)
 
-Universal:Button("SmokeClient", function()
+bf:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/SmokeXDev/SmokeXClient/main/Loader.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubBloxFruit"))() 
 end)
 
-Universal:Button("ChatByp", function()
+bf:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://gist.githubusercontent.com/lexsplorsex/d8652b2834372a7eb23b9707e21c6d65/raw/a3dd53c836f60334a8af3093badc71d9cc2260af/gistfile1.txt"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Slimexhub/main/Slimex-hub"))()
 end)
 
-Universal:Button("KeyBinds", function()
+bf:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Dragon-Hub/main/Script-Execute.lua"))()
 end)
 
-Universal:Button("AutoWalk", function()
+bf:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Walk%20Obfuscator'))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
 end)
 
-Universal:Button("Tp/fly/more", function()
+bf:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/romkich09/keySystem/main/mainKey'),true))()
+  getgenv().Color = Color3.fromRGB(0, 128, 255)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
 end)
 
-Universal:Button("Dex v3", function()
+bf:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
 end)
 
-Universal:Button("Dex v4", function()
+bf:Button("12", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/DannyH3103/scripts/main/Hydrogen_DEXV4"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Basicallyybeta/main/main/Mingaming.lua"))() 
 end)
 
-Universal:Button("Dex v2", function()
+bf:Button("13", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ItzWindy01/WindyXBypass/main/Rewrite.lua"))()
 end)
 
-local serv = win:Server("My Scripts", "")
-
-local Soon = serv:Channel("Soon")
-
-Soon:Button("Soon", function()
+bf:Button("14", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  print ("Soon!!")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/Matsunebeta.lua"))() 
 end)
+
+bf:Button("15", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/matssunehub.lua"
