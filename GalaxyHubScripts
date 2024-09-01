@@ -2,9 +2,33 @@ local DiscordLib = loadstring(game:HttpGet"https://git.homegu.com/raw/dawid-scri
 
 local win = DiscordLib:Window("GalaxyHub")
 
-local serv = win:Server("Script", "")
+local skri = win:Server("Script", "")
 
-local mm2 = serv:Channel("MM2")
+local cre = win:Server("Credits", "")
+
+local univ = win:Server("Universal", "")
+
+local myscri = win:Server("My Script", "")
+
+local mm2 = skri:Channel("MM2")
+
+local cof = skri:Channel("creatures of sonaria")
+
+local bab = skri:Channel("build a boat for treasure")
+
+local bh = skri:Channel("Brookhaven")
+
+local sp = skri:Channel("Slap Battles")
+
+local bf = skri:Channel("Blox Fruit")
+
+local dl = skri:Channel("Blade Ball")
+
+local un = univ:Channel("Universal")
+
+local ms = myscri:Channel("My script")
+
+local cr = cre:Channel("Credits")
 
 mm2:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -135,8 +159,6 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))
 end)
 
-local cof = serv:Channel("creatures of sonaria")
-
 cof:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://lycan-x-hub.vercel.app/script/5233782396'))()
@@ -146,8 +168,6 @@ cof:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/creatureofsonoria"))()
 end)
-
-local bab = serv:Channel("creatures of sonaria")
 
 bab:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -275,8 +295,6 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://gamingresources.github.io/BoatBlitz.lua"))()
 end)
 
-local bh = serv:Channel("Brookhaven")
-
 bh:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/mikeexc/Dance-Gui/main/Dance%20Gui", true))()
@@ -364,8 +382,6 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
 end)
 
-local sp = serv:Channel("Slap Battles")
-
 sp:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://rawscripts.net/raw/Slap-Battles-KykyryzoB-Hub-SB-9008'))()
@@ -415,8 +431,6 @@ sp:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheScriptMaster1/ScriptMaster-Hub/main/scriptmasterhub.lua')))()
 end)
-
-local bf = serv:Channel("Blox Fruit")
 
 bf:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -487,9 +501,4 @@ end)
 
 bf:Button("14", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/Matsunebeta.lua"))() 
-end)
-
-bf:Button("15", function()
-DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/matssunehub.lua"
+  loadstring(game:H
