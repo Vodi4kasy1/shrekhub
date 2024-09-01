@@ -1,1 +1,124 @@
+local UILibrary = {}
 
+function UILibrary:CreateWindow(title)
+    local window = Instance.new("ScreenGui")
+    local mainFrame = Instance.new("Frame")
+    -- Настройки для mainFrame (центрирование и стиль)
+
+    local closeButton = Instance.new("TextButton")
+    -- Настройки для closeButton (положение и стиль)
+    
+    closeButton.MouseButton1Click:Connect(function()
+        window.Enabled = false
+    end)
+
+    window.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    mainFrame.Parent = window
+    closeButton.Parent = mainFrame
+
+    -- ImageButton для открытия/закрытия
+    local toggleButton = Instance.new("ImageButton")
+    -- Настройки для toggleButton
+
+    toggleButton.MouseButton1Click:Connect(function()
+        window.Enabled = not window.Enabled
+    end)
+
+    toggleButton.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    return window
+end
+
+function UILibrary:CreateTab(parent, name)
+    local tab = Instance.new("Frame")
+    -- Настройки для tab
+
+    tab.Parent = parent
+    return tab
+end
+
+function UILibrary:CreateButton(parent, text, callback)
+    local button = Instance.new("TextButton")
+    -- Настройки для button
+
+    button.MouseButton1Click:Connect(callback)
+    button.Parent = parent
+    return button
+end
+
+function UILibrary:CreateTextBox(parent, placeholderText)
+    local textBox = Instance.new("TextBox")
+    -- Настройки для textBox
+
+    textBox.PlaceholderText = placeholderText
+    textBox.Parent = parent
+    return textBox
+end
+
+function UILibrary:CreateToggle(parent, defaultState, callback)
+    local toggle = Instance.new("TextButton")
+    -- Настройки для toggle
+
+    local state = defaultState
+    toggle.Text = state and "On" or "Off"
+
+    toggle.MouseButton1Click:Connect(function()
+        state = not state
+        toggle.Text = state and "On" or "Off"
+        callback(state)
+    end)
+
+    toggle.Parent = parent
+    return toggle
+end
+
+function UILibrary:CreateSlider(parent, min, max, callback)
+    local slider = Instance.new("Frame")
+    -- Настройки для slider
+
+    local sliderButton = Instance.new("TextButton")
+    -- Настройки для sliderButton
+
+    local valueBox = Instance.new("TextBox")
+    -- Настройки для valueBox
+
+    sliderButton.MouseButton1Down:Connect(function()
+        -- Логика для перемещения слайдера
+    end)
+
+    valueBox.FocusLost:Connect(function()
+        local value = tonumber(valueBox.Text)
+        if value then
+            value = math.clamp(value, min, max)
+            callback(value)
+        end
+    end)
+
+    slider.Parent = parent
+    sliderButton.Parent = slider
+    valueBox.Parent = slider
+    return slider
+end
+
+function UILibrary:CreateDropdown(parent, options, callback)
+    local dropdown = Instance.new("Frame")
+    -- Настройки для dropdown
+
+    local list = Instance.new("ScrollingFrame")
+    -- Настройки для list
+
+    for _, option in ipairs(options) do
+        local item = Instance.new("TextButton")
+        item.Text = option
+        item.MouseButton1Click:Connect(function()
+            callback(option)
+        end)
+        item.Parent = list
+    end
+
+    list.Parent = dropdown
+    dropdown.Parent = parent
+    return dropdown
+end
+
+return UILibrary
