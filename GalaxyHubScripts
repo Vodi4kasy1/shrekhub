@@ -140,7 +140,6 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://lycan-x-hub.vercel.app/script/5233782396'))()
 end)
 
-
 mm2:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   ---BIRD HUB---
@@ -164,12 +163,10 @@ end
 ---Dungeon Quest---
 end)
 
-
 mm2:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   local a,b,c,d,e=loadstring,request or http_request or (http and http.request),assert,tonumber,"\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x79\x63\x61\x6e\x2d\x78\x2d\x68\x75\x62\x2e\x76\x65\x72\x63\x65\x6c\x2e\x61\x70\x70";c(a and b,"E\120e\99\117\116or no\116 su\112\112or\116e\100\33")a(b({Url=e.."\47\115c\114i\112\116/"..d(game.PlaceId)}).Body)()
 end)
-
 
 mm2:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -181,7 +178,6 @@ else
 game:GetService("Players").LocalPlayer:Kick("Failed to connect to github")
 end
 end)
-
 
 mm2:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -252,73 +248,61 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
 end)
 
-
 bab:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://pastebin.com/raw/Erp5dMPH'),true))() 
 end)
-
 
 bab:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(("https://raw.githubusercontent.com/RawParmesan/Parmesan-Hub/main/Loader"),true))()
 end)
 
-
 bab:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/ExyXyz/ExyGantenk/main/ExyBABFT"))()
 end)
-
 
 bab:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
 end)
 
-
 bab:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://pastebin.com/raw/Sr2nf07q"))() 
 end)
-
 
 bab:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://astronomic.vercel.app"))()
 end)
 
-
 bab:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/SweatDestroyer/main/MainOperator.lua", true))()
 end)
-
 
 bab:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGetAsync("https://gitlab.com/vugiakhiem2106/Universal/-/raw/main/ScriptLoader.lua"))()
 end)
 
-
 bab:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua"))()
 end)
-
 
 bab:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")() 
 end)
 
-
 bab:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   -- fart script
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Sussy-Tech/Scripts/main/FartHub.lua"),true))()
 end)
-
 
 bab:Button("12", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -774,90 +758,75 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
 end)
 
-
 brk:Button("2", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Spanish-HUB-V2-8258", true))() 
 end)
-
 
 brk:Button("3", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/err0r129/SerpenteXbetaByDefense129/main/Serpente.Scripts"))()
 end)
 
-
 brk:Button("4", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/od1ri/Brookhaven/main/v1.lua"))() 
 end)
-
 
 brk:Button("5", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()%60%60%60
 end)
 
-
 brk:Button("6", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://pastebin.com/raw/QMVVEMTn"))();
 end)
-
 
 brk:Button("7", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
 end)
 
-
 brk:Button("8", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
 end)
-
 
 brk:Button("9", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/exterauser/exteraHub/main/Loader", true))()
 end)
 
-
 brk:Button("10", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
 end)
-
 
 brk:Button("11", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(("https://raw.githubusercontent.com/RawParmesan/Parmesan-Hub/main/Loader"),true))()
 end)
 
-
 brk:Button("12", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/woopstwq/ssswool/main/77_ICLH0U4.lua'))()
 end)
-
 
 brk:Button("13", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))() 
 end)
 
-
 brk:Button("14", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
 end)
 
-
 brk:Button("15", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
 end)
-
 
 brk:Button("16", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -870,78 +839,65 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/000000001.lua"))()
 end)
 
-
 brk:Button("18", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
 end)
-
 
 brk:Button("19", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/000000001.lua"))()
 end)
 
-
 brk:Button("20", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
 end)
-
 
 brk:Button("21", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
 
-
 brk:Button("22", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kederal/script.gg/main/loader.lua"))()
 end)
-
 
 brk:Button("23", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/ChillSoftworks/Houseg/main/Housegui"))()
 end)
 
-
 brk:Button("24", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
    loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/a8ef23a468af4ec5686fc6104066b501/raw/4dcc185733e69c358c32359fab1b4c27e578b4ee/ttt", true))()
 end)
-
 
 brk:Button("25", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet((‘https://raw.githubusercontent.com/CJStyles123/BrookhavenRP/main/CandyFarm’),true))()
 end)
 
-
 brk:Button("26", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(“https://gist.githubusercontent.com/testttbqwebg/adc0db730f5dfca0d8dbdb81f3b65391/raw/b0443888c4399af5a297cb1100a4749c65705711/qweqw”, true))()
 end)
-
 
 brk:Button("27", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-
 brk:Button("28", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
 end)
 
-
 brk:Button("29", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
-
 
 brk:Button("30", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
@@ -957,42 +913,35 @@ DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-
 Universal:Button("Fling", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://paste.ee/r/NTtmf", true))()
 end)
-
 
 Universal:Button("CharByp", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://gist.githubusercontent.com/lexsplorsex/b4b3b1243329327faec92f6953d4ed02/raw/a144202fc87db6493a109bf91a7cd14445e012ec/gistfile1.txt"))()
 end)
 
-
 Universal:Button("What", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
 end)
-
 
 Universal:Button("KRNLexecute", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
 end)
 
-
 Universal:Button("ChatBayp", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://gist.githubusercontent.com/lexsplorsex/c9d9469a5787ed86a78473c0ad7f4c4e/raw/200a170c4df91d83f6245934ddb70b3c14d339ec/gistfile1.txt"))()
 end)
 
-
 Universal:Button("Rspy", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
 end)
-
 
 Universal:Button("TpPlayer", function()
 DiscordLib:Notification("Inject!", "Get funny<3 press H to use", "GalaxyHub✓")
@@ -1086,12 +1035,10 @@ local keybind = "J" -- change hotkey here
 
 end)
 
-
 Universal:Button("Esp/more", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
   loadstring(game:HttpGet(('https://pastebin.com/raw/y94Ejz3B'),true))();
 end)
-
 
 Universal:Button("aim", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
