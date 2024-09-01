@@ -1,5 +1,4 @@
-local MyUILib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/shrekhub/main/Mygui"))()
-
+local MyUILib = {}
 function MyUILib:CreateWindow(title)
     local screenGui = Instance.new("ScreenGui")
     screenGui.Name = "CustomUI"
