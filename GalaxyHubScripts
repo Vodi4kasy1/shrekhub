@@ -12,6 +12,10 @@ local cre = win:Server("Credits", "")
 
 local mm2 = skri:Channel("MM2")
 
+local za = skri:Channel("Zombie Attak")
+
+local ik = skri:Channel("3008")
+
 local cof = skri:Channel("creatures of sonaria")
 
 local bab = skri:Channel("build a boat for treasure")
@@ -721,4 +725,202 @@ end)
 cr:Button("Youkiih", function()
 DiscordLib:Notification("Youkiih", "_Creator_", "GalaxyHub✓")
   print("Galaxy Script Hub/Creatot-Youkiih")
+end)
+
+za:Button("1", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))()
+end)
+
+za:Button("2", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))()
+end)
+
+za:Button("3", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxys3rrV/jaydens-hub/main/script"))()
+end)
+
+za:Button("4", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/stuffman0001/CanHub/main/Code"))()
+end)
+
+za:Button("5", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://ghost-storage.7m.pl/scripts/ghosthublauncher.lua'))()
+end)
+
+za:Button("6", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/PcallSkeleton/Project/main/Loader", true))()
+end)
+
+za:Button("7", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingResources/GamingResources-Script-Hub/main/Key%20System", true))()
+end)
+
+za:Button("8", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://gamingresources.github.io/ScriptHub.lua'))()
+end)
+
+za:Button("9", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", true))()
+end)
+
+za:Button("10", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))()
+end)
+
+ik:Button("1", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+local MainUI = UILibrary.Load("Ikea - 3008")
+local Home = MainUI.AddPage("Home")
+
+-- ESP
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+ESP:Toggle(true)
+ESP.Players = false
+ESP.Tracers = false
+ESP.Boxes = false
+ESP.Names = false
+
+-- notify function
+local function notify(message)
+   game.StarterGui:SetCore("SendNotification", {
+       Title = "LoL";
+       Text = message;
+       Icon = "";
+       Duration = 5;
+   })
+end
+
+local function teleportToItem(itemName)
+   local donesearch = false
+   for i,v in pairs(game:GetService("Workspace").GameObjects.Physical.Items:GetDescendants()) do
+       if v.Name == "Root" and v.Parent.Name == itemName then
+           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+           donesearch = true
+           break
+       end
+   end
+   if donesearch == false then
+       notify("Item position not defined")
+   end
+end
+
+ESP:AddObjectListener(game:GetService("Workspace").GameObjects.Physical.Items, {
+   Type = "Model",
+   Color = Color3.fromRGB(0, 119, 255),
+   IsEnabled = "itemESP"
+})
+
+ESP:AddObjectListener(game:GetService("Workspace").GameObjects.Physical.Employees, {
+   Type = "Model",
+   CustomName = "Employee",
+   Color = Color3.fromRGB(255, 0, 4),
+   IsEnabled = "employeeToggle"
+})
+
+Home.AddButton("Unlock Third Person", function()
+   game.Players.LocalPlayer.CameraMaxZoomDistance = 50
+   game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
+end)
+
+Home.AddToggle("ESP", false, function(Value)
+   ESP.Boxes = Value
+end)
+
+Home.AddToggle("ESP Tracers", false, function(Value)
+   ESP.Tracers = Value
+end)
+
+Home.AddToggle("ESP Nametags", false, function(Value)
+   ESP.Names = Value
+end)
+
+Home.AddToggle("Show Players", false, function(Value)
+   ESP.Players = Value
+end)
+
+Home.AddToggle("Show Employees", false, function(Value)
+   ESP.employeeToggle = Value
+end)
+
+Home.AddToggle("Show Items", false, function(Value)
+   ESP.itemESP = Value
+end)
+
+local Teleports = MainUI.AddPage("Teleports")
+
+Teleports.AddButton("Teleport to Hotdog", function()
+   teleportToItem("Hotdog")
+end)
+
+Teleports.AddButton("Teleport to Pizza", function()
+   teleportToItem("Pizza")
+end)
+
+Teleports.AddButton("Teleport to Burger", function()
+   teleportToItem("Burger")
+end)
+
+Teleports.AddButton("Teleport to Medkit", function()
+   teleportToItem("Medkit")
+end)
+end)
+
+ik:Button("2", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/chiepz/aslbnmnkhby7e/main/crqhryvjahdjwysrnegsf%5Csgd"))()
+end)
+
+ik:Button("3", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://api-sirclub.onrender.com/scripts/raw/MainFile.lua"))()
+end)
+
+ik:Button("4", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+end)
+
+ik:Button("5", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  getgenv().Key = "87bad5dcf734e92a77dd8e7824609d306597884c";
+loadstring(game:HttpGet("https://gabescripts.com/access.lua"))()
+end)
+
+ik:Button("6", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  --Script:  
+loadstring(game:HttpGet('https://scripts.luawl.com/Main/Scourge.lua'))()
+end)
+
+ik:Button("7", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/HPHub/main/HPHub.lua"))()
+end)
+
+ik:Button("8", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  getgenv().Key = "putkeyhere";
+loadstring(game:HttpGet("https://gabescripts.com/access.lua"))()
+end)
+
+ik:Button("9", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/scripts/main/3008.lua')()
+end)
+
+ik:Button("10", function()
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
 end)
