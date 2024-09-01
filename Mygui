@@ -171,4 +171,3 @@ function MyUILib:CreateTab(parent, tabNames)
 end
 
 return MyUILib
-
