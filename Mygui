@@ -1,9 +1,174 @@
+local MyUILib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/shrekhub/main/Mygui"))()
 
-local MyUILib = loadstring(game:HttpGet("https://pastebin.com/raw/YourPastebinID"))()
+function MyUILib:CreateWindow(title)
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "CustomUI"
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
--- Используем библиотеку
-local window = MyUILib:CreateWindow("My Custom UI")
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0.3, 0, 0.4, 0)
+    frame.Position = UDim2.new(0.35, 0, 0.3, 0)
+    frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    frame.Parent = screenGui
 
-MyUILib:CreateButton(window, "Click Me", function()
-    print("Button clicked!")
-end)
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, 0, 0.1, 0)
+    textLabel.Position = UDim2.new(0, 0, 0, 0)
+    textLabel.Text = title
+    textLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Parent = frame
+
+    return frame
+end
+
+function MyUILib:CreateButton(parent, text, callback)
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(0.8, 0, 0.1, 0)
+    button.Position = UDim2.new(0.1, 0, 0.2, 0)
+    button.Text = text
+    button.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Parent = parent
+
+    button.MouseButton1Click:Connect(callback)
+end
+
+function MyUILib:CreateToggle(parent, text, callback)
+    local toggle = Instance.new("TextButton")
+    toggle.Size = UDim2.new(0.8, 0, 0.1, 0)
+    toggle.Position = UDim2.new(0.1, 0, 0.4, 0)
+    toggle.Text = text
+    toggle.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    toggle.Parent = parent
+
+    local toggled = false
+    toggle.MouseButton1Click:Connect(function()
+        toggled = not toggled
+        toggle.BackgroundColor3 = toggled and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+        callback(toggled)
+    end)
+end
+
+function MyUILib:CreateSlider(parent, min, max, callback)
+    local sliderFrame = Instance.new("Frame")
+    sliderFrame.Size = UDim2.new(0.8, 0, 0.1, 0)
+    sliderFrame.Position = UDim2.new(0.1, 0, 0.6, 0)
+    sliderFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    sliderFrame.Parent = parent
+
+    local sliderButton = Instance.new("TextButton")
+    sliderButton.Size = UDim2.new(0.1, 0, 1, 0)
+    sliderButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+    sliderButton.Parent = sliderFrame
+
+    sliderButton.MouseButton1Down:Connect(function()
+        local moveConnection
+        moveConnection = game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement then
+                local scale = math.clamp((input.Position.X - sliderFrame.AbsolutePosition.X) / sliderFrame.AbsoluteSize.X, 0, 1)
+                sliderButton.Position = UDim2.new(scale, 0, 0, 0)
+                local value = min + (max - min) * scale
+                callback(value)
+            end
+        end)
+
+        game:GetService("UserInputService").InputEnded:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                moveConnection:Disconnect()
+            end
+        end)
+    end)
+end
+
+function MyUILib:CreateTextLabel(parent, text)
+    local label = Instance.new("TextLabel")
+    label.Size = UDim2.new(0.8, 0, 0.1, 0)
+    label.Position = UDim2.new(0.1, 0, 0.8, 0)
+    label.Text = text
+    label.TextColor3 = Color3.fromRGB(0, 0, 0)
+    label.BackgroundTransparency = 1
+    label.Parent = parent
+end
+
+function MyUILib:CreateTextBox(parent, placeholderText, callback)
+    local textBox = Instance.new("TextBox")
+    textBox.Size = UDim2.new(0.8, 0, 0.1, 0)
+    textBox.Position = UDim2.new(0.1, 0, 1.0, 0)
+    textBox.PlaceholderText = placeholderText
+    textBox.Text = ""
+    textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+    textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    textBox.Parent = parent
+
+    textBox.FocusLost:Connect(function(enterPressed)
+        if enterPressed then
+            callback(textBox.Text)
+        end
+    end)
+end
+
+function MyUILib:CreateDropdown(parent, options, callback)
+    local dropdown = Instance.new("TextButton")
+    dropdown.Size = UDim2.new(0.8, 0, 0.1, 0)
+    dropdown.Position = UDim2.new(0.1, 0, 1.2, 0)
+    dropdown.Text = "Select"
+    dropdown.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+    dropdown.TextColor3 = Color3.fromRGB(255, 255, 255)
+    dropdown.Parent = parent
+
+    local listFrame = Instance.new("Frame")
+    listFrame.Size = UDim2.new(1, 0, #options * 0.1, 0)
+    listFrame.Position = UDim2.new(0, 0, 1, 0)
+    listFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    listFrame.Visible = false
+    listFrame.Parent = dropdown
+
+    for i, option in ipairs(options) do
+        local optionButton = Instance.new("TextButton")
+        optionButton.Size = UDim2.new(1, 0, 1 / #options, 0)
+        optionButton.Position = UDim2.new(0, 0, (i - 1) / #options, 0)
+        optionButton.Text = option
+        optionButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        optionButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+        optionButton.Parent = listFrame
+
+        optionButton.MouseButton1Click:Connect(function()
+            dropdown.Text = option
+            listFrame.Visible = false
+            callback(option)
+        end)
+    end
+
+    dropdown.MouseButton1Click:Connect(function()
+        listFrame.Visible = not listFrame.Visible
+    end)
+end
+
+function MyUILib:CreateTab(parent, tabNames)
+    local tabFrame = Instance.new("Frame")
+    tabFrame.Size = UDim2.new(1, 0, 0.1, 0)
+    tabFrame.Position = UDim2.new(0, 0, 0, 0)
+    tabFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    tabFrame.Parent = parent
+
+    local tabs = {}
+
+    for i, name in ipairs(tabNames) do
+        local tabButton = Instance.new("TextButton")
+        tabButton.Size = UDim2.new(1 / #tabNames, 0, 1, 0)
+        tabButton.Position = UDim2.new((i - 1) / #tabNames, 0, 0, 0)
+        tabButton.Text = name
+        tabButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        tabButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+        tabButton.Parent = tabFrame
+
+        tabs[name] = tabButton
+    end
+
+    return tabs
+end
+
+return MyUILib
+
