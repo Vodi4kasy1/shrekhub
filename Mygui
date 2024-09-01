@@ -1,0 +1,378 @@
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Создаем ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+-- Создаем основной Frame
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 0, 0, 0) -- Начальный размер
+mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainFrame.BackgroundTransparency = 0.1
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
+
+-- Закругляем края
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 10)
+corner.Parent = mainFrame
+
+-- Создаем разделение
+local divider = Instance.new("Frame")
+divider.Size = UDim2.new(0, 5, 1, 0)
+divider.Position = UDim2.new(0.2, 0, 0, 0)
+divider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+divider.BorderSizePixel = 0
+divider.Parent = mainFrame
+
+-- Создаем дополнительный Frame для кнопок
+local sideFrame = Instance.new("Frame")
+sideFrame.Size = UDim2.new(0.2, 0, 1, 0)
+sideFrame.Position = UDim2.new(0, 0, 0, 0)
+sideFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+sideFrame.BorderSizePixel = 0
+sideFrame.Parent = mainFrame
+
+local sideCorner = Instance.new("UICorner")
+sideCorner.CornerRadius = UDim.new(0, 10)
+sideCorner.Parent = sideFrame
+
+-- Создаем Frame для отображения информации
+local infoFrame = Instance.new("Frame")
+infoFrame.Size = UDim2.new(0.8, -10, 1, -10)
+infoFrame.Position = UDim2.new(0.2, 5, 0, 5)
+infoFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+infoFrame.BorderSizePixel = 0
+infoFrame.Parent = mainFrame
+
+local infoCorner = Instance.new("UICorner")
+infoCorner.CornerRadius = UDim.new(0, 10)
+infoCorner.Parent = infoFrame
+
+-- Создаем TextLabel для отображения времени
+local timeLabel = Instance.new("TextLabel")
+timeLabel.Size = UDim2.new(0, 200, 0, 50)
+timeLabel.Position = UDim2.new(0.5, 0, 0, 0)
+timeLabel.AnchorPoint = Vector2.new(0.5, 0)
+timeLabel.BackgroundTransparency = 1
+timeLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+timeLabel.Font = Enum.Font.SourceSans
+timeLabel.TextSize = 24
+timeLabel.Parent = mainFrame
+
+-- Создаем кнопку в секции Main
+local mainButton = Instance.new("TextButton")
+mainButton.Size = UDim2.new(0, 100, 0, 40)
+mainButton.Position = UDim2.new(0, 10, 0, 60) -- Перемещена ниже
+mainButton.BackgroundColor3 = Color3.fromRGB(100, 150, 250)
+mainButton.Text = "Main Button"
+mainButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+mainButton.Font = Enum.Font.SourceSans
+mainButton.TextSize = 18
+mainButton.Parent = infoFrame
+
+local mainButtonCorner = Instance.new("UICorner")
+mainButtonCorner.CornerRadius = UDim.new(0, 10)
+mainButtonCorner.Parent = mainButton
+
+-- Обработчик нажатия на Main Button
+mainButton.MouseButton1Click:Connect(function()
+    print("game.Players.LocalPlayer.Character.Humanoid.JumpPower = game.Players.LocalPlayer.Character.Humanoid.JumpPower + 10")
+end)
+
+-- Создаем Toggle
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(0, 100, 0, 40)
+toggleButton.Position = UDim2.new(0, 10, 0, 110) -- Чуть ниже Main Button
+toggleButton.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+toggleButton.Text = "Toggle"
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.Font = Enum.Font.SourceSans
+toggleButton.TextSize = 18
+toggleButton.Parent = infoFrame
+
+local toggleButtonCorner = Instance.new("UICorner")
+toggleButtonCorner.CornerRadius = UDim.new(0, 10)
+toggleButtonCorner.Parent = toggleButton
+
+local toggleState = false
+
+-- Функция для отображения уведомления
+local function showNotification(message)
+    local notification = Instance.new("TextLabel")
+    notification.Size = UDim2.new(0, 200, 0, 50)
+    notification.Position = UDim2.new(0.5, 0, 0.1, 0)
+    notification.AnchorPoint = Vector2.new(0.5, 0)
+    notification.BackgroundTransparency = 0.3
+    notification.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notification.Font = Enum.Font.SourceSans
+    notification.TextSize = 24
+    notification.Text = message
+    notification.Parent = screenGui
+
+    wait(1.2)
+    notification:Destroy()
+end
+
+-- Обработчик нажатия на Toggle
+toggleButton.MouseButton1Click:Connect(function()
+    toggleState = not toggleState
+    if toggleState then
+        print("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300")
+        showNotification("Toggle On")
+    else
+        print("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24")
+        showNotification("Toggle Off")
+    end
+end)
+
+-- Создаем Slider
+local sliderFrame = Instance.new("Frame")
+sliderFrame.Size = UDim2.new(0, 300, 0, 40)
+sliderFrame.Position = UDim2.new(0, 10, 0, 160) -- Чуть ниже Toggle
+sliderFrame.BackgroundColor3 = Color3.fromRGB(180, 180, 180)
+sliderFrame.BorderSizePixel = 0
+sliderFrame.Parent = infoFrame
+
+local sliderCorner = Instance.new("UICorner")
+sliderCorner.CornerRadius = UDim.new(0, 10)
+sliderCorner.Parent = sliderFrame
+
+-- Создаем ползунок
+local sliderButton = Instance.new("TextButton")
+sliderButton.Size = UDim2.new(0, 20, 1, 0)
+sliderButton.Position = UDim2.new(0, 0, 0, 0)
+sliderButton.BackgroundColor3 = Color3.fromRGB(100, 100, 250)
+sliderButton.Text = ""
+sliderButton.Parent = sliderFrame
+
+local sliderButtonCorner = Instance.new("UICorner")
+sliderButtonCorner.CornerRadius = UDim.new(0, 10)
+sliderButtonCorner.Parent = sliderButton
+
+-- Создаем TextBox для ввода значения
+local sliderTextBox = Instance.new("TextBox")
+sliderTextBox.Size = UDim2.new(0, 50, 0, 40)
+sliderTextBox.Position = UDim2.new(1, 10, 0, 0)
+sliderTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sliderTextBox.Text = "0"
+sliderTextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+sliderTextBox.Font = Enum.Font.SourceSans
+sliderTextBox.TextSize = 18
+sliderTextBox.Parent = sliderFrame
+
+local sliderTextBoxCorner = Instance.new("UICorner")
+sliderTextBoxCorner.CornerRadius = UDim.new(0, 10)
+sliderTextBoxCorner.Parent = sliderTextBox
+
+-- Обработчик для перемещения ползунка
+sliderButton.MouseButton1Down:Connect(function()
+    local userInput = game:GetService("UserInputService")
+    local function onInputChanged(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then
+            local mousePos = userInput:GetMouseLocation().X
+            local sliderPos = math.clamp(mousePos - sliderFrame.AbsolutePosition.X, 0, sliderFrame.AbsoluteSize.X)
+            sliderButton.Position = UDim2.new(0, sliderPos, 0, 0)
+            local value = math.floor((sliderPos / sliderFrame.AbsoluteSize.X) * 500)
+            sliderTextBox.Text = tostring(value)
+            print("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = " .. value)
+        end
+    end
+    local connection
+    connection = userInput.InputChanged:Connect(onInputChanged)
+    userInput.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            connection:Disconnect()
+        end
+    end)
+end)
+
+-- Обработчик для изменения значения через TextBox
+sliderTextBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local value = tonumber(sliderTextBox.Text)
+        if value then
+            value = math.clamp(value, 0, 500)
+            local sliderPos = (value / 500) * sliderFrame.AbsoluteSize.X
+            sliderButton.Position = UDim2.new(0, sliderPos, 0, 0)
+            sliderTextBox.Text = tostring(value)
+            print("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = " .. value)
+        else
+            sliderTextBox.Text = "0"
+        end
+    end
+end)
+
+-- Функция для обновления времени
+local function updateTime()
+    while true do
+        local currentTime = os.date("!*t")
+        local hour = (currentTime.hour + 3) % 24 -- Московское время (UTC+3)
+        local minute = currentTime.min
+        local second = currentTime.sec
+        timeLabel.Text = string.format("%02d:%02d:%02d", hour, minute, second)
+        wait(1) -- Обновление каждую секунду
+    end
+end
+
+-- Запуск обновления времени в отдельном потоке
+spawn(updateTime)
+
+-- Создаем DropDown
+local dropDownButton = Instance.new("TextButton")
+dropDownButton.Size = UDim2.new(0, 100, 0, 40)
+dropDownButton.Position = UDim2.new(0, 10, 0, 210) -- Чуть ниже Slider
+dropDownButton.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+dropDownButton.Text = "Select"
+dropDownButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+dropDownButton.Font = Enum.Font.SourceSans
+dropDownButton.TextSize = 18
+dropDownButton.Parent = infoFrame
+
+local dropDownButtonCorner = Instance.new("UICorner")
+dropDownButtonCorner.CornerRadius = UDim.new(0, 10)
+dropDownButtonCorner.Parent = dropDownButton
+
+local dropDownFrame = Instance.new("Frame")
+dropDownFrame.Size = UDim2.new(0, 100, 0, 0)
+dropDownFrame.Position = UDim2.new(0, 10, 0, 250)
+dropDownFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+dropDownFrame.BorderSizePixel = 0
+dropDownFrame.Visible = false
+dropDownFrame.Parent = infoFrame
+
+local dropDownCorner = Instance.new("UICorner")
+dropDownCorner.CornerRadius = UDim.new(0, 10)
+dropDownCorner.Parent = dropDownFrame
+
+local options = {"Carrot", "Potato", "Cola", "Pepsi"}
+local selectedOption = nil
+
+for i, option in ipairs(options) do
+    local optionButton = Instance.new("TextButton")
+    optionButton.Size = UDim2.new(1, 0, 0, 30)
+    optionButton.Position = UDim2.new(0, 0, 0, (i - 1) * 30)
+    optionButton.BackgroundColor3 = Color3.fromRGB(180, 180, 180)
+    optionButton.Text = option
+    optionButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    optionButton.Font = Enum.Font.SourceSans
+    optionButton.TextSize = 18
+    optionButton.Parent = dropDownFrame
+
+    optionButton.MouseButton1Click:Connect(function()
+        selectedOption = option
+        dropDownButton.Text = option
+        dropDownFrame.Visible = false
+        print("Selected: " .. option)
+    end)
+end
+
+dropDownButton.MouseButton1Click:Connect(function()
+    dropDownFrame.Visible = not dropDownFrame.Visible
+end)
+
+-- Создаем кнопки в левом разделе
+local buttonData = {
+    {name = "Main"},
+    {name = "Player"},
+    {name = "Esp"},
+    {name = "Tools"}
+}
+
+for i, data in ipairs(buttonData) do
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(1, -10, 0, 40)
+    button.Position = UDim2.new(0, 5, 0, (i - 1) * 45 + 10)
+    button.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+    button.Text = data.name
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Font = Enum.Font.SourceSans
+    button.TextSize = 18
+    button.Parent = sideFrame
+    
+    local buttonCorner = Instance.new("UICorner")
+    buttonCorner.CornerRadius = UDim.new(0, 10)
+    buttonCorner.Parent = button
+    
+    if data.name == "Main" then
+        button.MouseButton1Click:Connect(function()
+            infoFrame.Visible = true
+        end)
+    else
+        button.MouseButton1Click:Connect(function()
+            infoFrame.Visible = false
+        end)
+    end
+end
+
+-- Создаем кнопку закрытия
+local closeButton = Instance.new("ImageButton")
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -35, 0, 5)
+closeButton.AnchorPoint = Vector2.new(1, 0)
+closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+closeButton.Image = "rbxassetid://<your_close_image_id>"
+closeButton.Parent = mainFrame
+
+local closeCorner = Instance.new("UICorner")
+closeCorner.CornerRadius = UDim.new(0, 10)
+closeCorner.Parent = closeButton
+
+-- Функция для закрытия с анимацией
+local function closeFrame()
+    mainFrame:TweenPosition(
+        UDim2.new(0.5, 0, 1.5, 0),
+        Enum.EasingDirection.In,
+        Enum.EasingStyle.Quad,
+        0.7,
+        true,
+        function()
+            screenGui:Destroy()
+        end
+    )
+end
+
+-- Подключение функции к кнопке закрытия
+closeButton.MouseButton1Click:Connect(closeFrame)
+
+-- Функция для анимации увеличения размера
+local function animateFrame()
+    mainFrame:TweenSize(
+        UDim2.new(0.8, 0, 0.8, 0),
+        Enum.EasingDirection.Out,
+        Enum.EasingStyle.Quad,
+        1,
+        true
+    )
+end
+
+-- Вызов функции анимации
+animateFrame()
+
+-- Создаем ImageButton для скрытия/открытия GUI
+local toggleGuiButton = Instance.new("ImageButton")
+toggleGuiButton.Size = UDim2.new(0, 30, 0, 30)
+toggleGuiButton.Position = UDim2.new(0, -35, 0.5, 0) -- Слева по середине
+toggleGuiButton.AnchorPoint = Vector2.new(0, 0.5)
+toggleGuiButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+toggleGuiButton.Image = "rbxassetid://<your_toggle_image_id>"
+toggleGuiButton.Parent = screenGui
+
+local toggleGuiCorner = Instance.new("UICorner")
+toggleGuiCorner.CornerRadius = UDim.new(0, 10)
+toggleGuiCorner.Parent = toggleGuiButton
+
+local guiVisible = true
+
+-- Функция для скрытия/открытия GUI
+local function toggleGui()
+    guiVisible = not guiVisible
+    mainFrame.Visible = guiVisible
+end
+
+-- Подключение функции к кнопке
+toggleGuiButton.MouseButton1Click:Connect(toggleGui)
