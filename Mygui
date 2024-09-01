@@ -1,1 +1,9 @@
 
+local MyUILib = loadstring(game:HttpGet("https://pastebin.com/raw/YourPastebinID"))()
+
+-- Используем библиотеку
+local window = MyUILib:CreateWindow("My Custom UI")
+
+MyUILib:CreateButton(window, "Click Me", function()
+    print("Button clicked!")
+end)
