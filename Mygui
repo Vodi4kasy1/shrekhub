@@ -1,84 +1,99 @@
-local UI = {}
+local UILibrary = {}
 
-function UI.createButton(text, parent)
+-- Функция для создания вкладки
+function UILibrary:CreateTab(name)
+    local tab = Instance.new("Frame")
+    tab.Name = name
+    tab.Size = UDim2.new(0, 200, 0, 30)
+    return tab
+end
+
+-- Функция для создания окна
+function UILibrary:CreateWindow(name)
+    local window = Instance.new("Frame")
+    window.Name = name
+    window.Size = UDim2.new(0, 300, 0, 400)
+    return window
+end
+
+-- Функция для создания кнопки
+function UILibrary:CreateButton(name, text)
     local button = Instance.new("TextButton")
+    button.Name = name
     button.Text = text
-    button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    button.Size = UDim2.new(0, 200, 0, 50)
-    button.Parent = parent
+    button.Size = UDim2.new(0, 100, 0, 50)
+    return button
 end
 
-function UI.createTextBox(placeholderText, parent)
+-- Функция для создания слайдера
+function UILibrary:CreateSlider(name)
+    local slider = Instance.new("Frame")
+    slider.Name = name
+    slider.Size = UDim2.new(0, 200, 0, 20)
+    return slider
+end
+
+-- Функция для создания текстового поля
+function UILibrary:CreateTextBox(name)
     local textBox = Instance.new("TextBox")
-    textBox.PlaceholderText = placeholderText
-    textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    textBox.Name = name
     textBox.Size = UDim2.new(0, 200, 0, 50)
-    textBox.Parent = parent
+    return textBox
 end
 
-function UI.createCloseGuiButton(parent)
-    local closeButton = Instance.new("ImageButton")
-    closeButton.Size = UDim2.new(0, 50, 0, 50)
-    closeButton.Position = UDim2.new(0, 10, 0.5, 0)
-    closeButton.AnchorPoint = Vector2.new(0, 0.5)
-    closeButton.Parent = parent
-end
-
-function UI.createToggle(parent)
+-- Функция для создания переключателя
+function UILibrary:CreateToggle(name)
     local toggle = Instance.new("TextButton")
-    toggle.Text = "Toggle"
-    toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    toggle.Size = UDim2.new(0, 100, 0, 50)
-    toggle.Parent = parent
+    toggle.Name = name
+    toggle.Size = UDim2.new(0, 50, 0, 50)
+    return toggle
 end
 
-function UI.createSlider(minValue, maxValue, defaultValue, parent)
-    local slider = Instance.new("TextButton")
-    slider.Text = "Slider"
-    slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    slider.Size = UDim2.new(0, 200, 0, 50)
-    slider.Parent = parent
-end
-
-function UI.createDropdown(options, parent)
-    local dropdown = Instance.new("TextButton")
-    dropdown.Text = "Dropdown"
-    dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    dropdown.Size = UDim2.new(0, 150, 0, 50)
-    dropdown.Parent = parent
-end
-
-function UI.createImageButton(image, parent)
+-- Функция для создания ImageButton
+function UILibrary:CreateImageButton(name, image)
     local imageButton = Instance.new("ImageButton")
+    imageButton.Name = name
     imageButton.Image = image
     imageButton.Size = UDim2.new(0, 50, 0, 50)
-    imageButton.Position = UDim2.new(0, 10, 0.5, 0)
-    imageButton.AnchorPoint = Vector2.new(0, 0.5)
-    imageButton.Parent = parent
+
+    -- Добавляем функционал для открытия/закрытия GUI
+    imageButton.MouseButton1Click:Connect(function()
+        local gui = imageButton.Parent
+        gui.Visible = not gui.Visible
+    end)
+
+    -- Добавляем функционал для перемещения
+    local dragging = false
+    local dragInput, mousePos, framePos
+
+    imageButton.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            mousePos = input.Position
+            framePos = imageButton.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    imageButton.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then
+            dragInput = input
+        end
+    end)
+
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - mousePos
+            imageButton.Position = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
+        end
+    end)
+
+    return imageButton
 end
 
-function UI.createTab(tabName, parent)
-    local tab = Instance.new("TextButton")
-    tab.Text = tabName
-    tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    tab.Size = UDim2.new(0, 100, 0, 50)
-    tab.Parent = parent
-end
-
-function UI.createWindow(title, parent)
-    local window = Instance.new("Frame")
-    window.Size = UDim2.new(0, 300, 0, 200)
-    window.Position = UDim2.new(0.5, -150, 0.5, -100)
-    window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    window.Parent = parent
-end
-
-function UI.createNotification(message, parent)
-    local notification = Instance.new("TextLabel")
-    notification.Text = message
-    notification.Size = UDim2.new(0, 200, 0, 50)
-    notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    notification.Parent = parent
-end
-
-return UI
+return UILibrary
