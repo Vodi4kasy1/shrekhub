@@ -1,124 +1,84 @@
-local UILibrary = {}
+local UI = {}
 
-function UILibrary:CreateWindow(title)
-    local window = Instance.new("ScreenGui")
-    local mainFrame = Instance.new("Frame")
-    -- Настройки для mainFrame (центрирование и стиль)
-
-    local closeButton = Instance.new("TextButton")
-    -- Настройки для closeButton (положение и стиль)
-    
-    closeButton.MouseButton1Click:Connect(function()
-        window.Enabled = false
-    end)
-
-    window.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    mainFrame.Parent = window
-    closeButton.Parent = mainFrame
-
-    -- ImageButton для открытия/закрытия
-    local toggleButton = Instance.new("ImageButton")
-    -- Настройки для toggleButton
-
-    toggleButton.MouseButton1Click:Connect(function()
-        window.Enabled = not window.Enabled
-    end)
-
-    toggleButton.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    return window
-end
-
-function UILibrary:CreateTab(parent, name)
-    local tab = Instance.new("Frame")
-    -- Настройки для tab
-
-    tab.Parent = parent
-    return tab
-end
-
-function UILibrary:CreateButton(parent, text, callback)
+function UI.createButton(text, parent)
     local button = Instance.new("TextButton")
-    -- Настройки для button
-
-    button.MouseButton1Click:Connect(callback)
+    button.Text = text
+    button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    button.Size = UDim2.new(0, 200, 0, 50)
     button.Parent = parent
-    return button
 end
 
-function UILibrary:CreateTextBox(parent, placeholderText)
+function UI.createTextBox(placeholderText, parent)
     local textBox = Instance.new("TextBox")
-    -- Настройки для textBox
-
     textBox.PlaceholderText = placeholderText
+    textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    textBox.Size = UDim2.new(0, 200, 0, 50)
     textBox.Parent = parent
-    return textBox
 end
 
-function UILibrary:CreateToggle(parent, defaultState, callback)
+function UI.createCloseGuiButton(parent)
+    local closeButton = Instance.new("ImageButton")
+    closeButton.Size = UDim2.new(0, 50, 0, 50)
+    closeButton.Position = UDim2.new(0, 10, 0.5, 0)
+    closeButton.AnchorPoint = Vector2.new(0, 0.5)
+    closeButton.Parent = parent
+end
+
+function UI.createToggle(parent)
     local toggle = Instance.new("TextButton")
-    -- Настройки для toggle
-
-    local state = defaultState
-    toggle.Text = state and "On" or "Off"
-
-    toggle.MouseButton1Click:Connect(function()
-        state = not state
-        toggle.Text = state and "On" or "Off"
-        callback(state)
-    end)
-
+    toggle.Text = "Toggle"
+    toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    toggle.Size = UDim2.new(0, 100, 0, 50)
     toggle.Parent = parent
-    return toggle
 end
 
-function UILibrary:CreateSlider(parent, min, max, callback)
-    local slider = Instance.new("Frame")
-    -- Настройки для slider
-
-    local sliderButton = Instance.new("TextButton")
-    -- Настройки для sliderButton
-
-    local valueBox = Instance.new("TextBox")
-    -- Настройки для valueBox
-
-    sliderButton.MouseButton1Down:Connect(function()
-        -- Логика для перемещения слайдера
-    end)
-
-    valueBox.FocusLost:Connect(function()
-        local value = tonumber(valueBox.Text)
-        if value then
-            value = math.clamp(value, min, max)
-            callback(value)
-        end
-    end)
-
+function UI.createSlider(minValue, maxValue, defaultValue, parent)
+    local slider = Instance.new("TextButton")
+    slider.Text = "Slider"
+    slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    slider.Size = UDim2.new(0, 200, 0, 50)
     slider.Parent = parent
-    sliderButton.Parent = slider
-    valueBox.Parent = slider
-    return slider
 end
 
-function UILibrary:CreateDropdown(parent, options, callback)
-    local dropdown = Instance.new("Frame")
-    -- Настройки для dropdown
-
-    local list = Instance.new("ScrollingFrame")
-    -- Настройки для list
-
-    for _, option in ipairs(options) do
-        local item = Instance.new("TextButton")
-        item.Text = option
-        item.MouseButton1Click:Connect(function()
-            callback(option)
-        end)
-        item.Parent = list
-    end
-
-    list.Parent = dropdown
+function UI.createDropdown(options, parent)
+    local dropdown = Instance.new("TextButton")
+    dropdown.Text = "Dropdown"
+    dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    dropdown.Size = UDim2.new(0, 150, 0, 50)
     dropdown.Parent = parent
-    return dropdown
 end
 
-return UILibrary
+function UI.createImageButton(image, parent)
+    local imageButton = Instance.new("ImageButton")
+    imageButton.Image = image
+    imageButton.Size = UDim2.new(0, 50, 0, 50)
+    imageButton.Position = UDim2.new(0, 10, 0.5, 0)
+    imageButton.AnchorPoint = Vector2.new(0, 0.5)
+    imageButton.Parent = parent
+end
+
+function UI.createTab(tabName, parent)
+    local tab = Instance.new("TextButton")
+    tab.Text = tabName
+    tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    tab.Size = UDim2.new(0, 100, 0, 50)
+    tab.Parent = parent
+end
+
+function UI.createWindow(title, parent)
+    local window = Instance.new("Frame")
+    window.Size = UDim2.new(0, 300, 0, 200)
+    window.Position = UDim2.new(0.5, -150, 0.5, -100)
+    window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    window.Parent = parent
+end
+
+function UI.createNotification(message, parent)
+    local notification = Instance.new("TextLabel")
+    notification.Text = message
+    notification.Size = UDim2.new(0, 200, 0, 50)
+    notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notification.Parent = parent
+end
+
+return UI
