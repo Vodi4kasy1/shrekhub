@@ -1766,7 +1766,6 @@ DiscordLib:Notification("Inject!", "<3", "GalaxyHub?")
 local MainUI = UILibrary.Load("Ikea - 3008")
 local Home = MainUI.AddPage("Home")
 
--- ESP
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 ESP:Toggle(true)
 ESP.Players = false
@@ -1774,7 +1773,6 @@ ESP.Tracers = false
 ESP.Boxes = false
 ESP.Names = false
 
--- notify function
 local function notify(message)
    game.StarterGui:SetCore("SendNotification", {
        Title = "LoL";
@@ -1881,8 +1879,7 @@ loadstring(game:HttpGet("https://gabescripts.com/access.lua"))()
 end)
 
 ik:Button("6", function()
-DiscordLib:Notification("Inject!", "<3", "GalaxyHub?")
-  --Script:  
+DiscordLib:Notification("Inject!", "<3", "GalaxyHub?") 
 loadstring(game:HttpGet('https://scripts.luawl.com/Main/Scourge.lua'))()
 end)
 
