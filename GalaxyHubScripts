@@ -6,11 +6,29 @@ local skri = win:Server("Script", "")
 
 local univ = win:Server("Universal", "")
 
+local spec = win:Server("Special", "")
+
 local myscri = win:Server("My Script", "")
 
 local cre = win:Server("Credits", "")
 
+local cpec = spec:Channel("Special")
+
 local mm2 = skri:Channel("MM2")
+
+local cur = skri:Channel("Cursed islands")
+
+local und = skri:Channel("underwater company")
+
+local natu = skri:Channel("Natural Disasters")
+
+local dor = skri:Channel("Doors")
+
+local lb = skri:Channel("Lucky Blocks")
+
+local ml = skri:Channel("Muscle Legends")
+
+local kat = skri:Channel("K.A.T")
 
 local za = skri:Channel("Zombie Attak")
 
@@ -35,6 +53,1045 @@ local un = univ:Channel("Universal")
 local ms = myscri:Channel("My script")
 
 local cr = cre:Channel("Credits")
+
+cpec:Button("fly", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-fly-universal-gui-15643"))()
+end)
+
+cpec:Textbox("Set Speed", "Enter speed value", true, function(text)
+    local number = tonumber(text)
+    if number then
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.WalkSpeed = number
+        end
+    else
+        print("Введите корректное число")
+    end
+end)
+
+cpec:Textbox("Set Jump", "Enter jump value", true, function(text)
+    local number = tonumber(text)
+    if number then
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.JumpPower = number
+        end
+    else
+        print("Введите корректное число")
+    end
+end)
+
+local noclipEnabled = false
+
+local function toggleNoclip()
+    noclipEnabled = not noclipEnabled
+end
+
+channel:Toggle("Noclip", false, function(value)
+    toggleNoclip()
+end)
+
+game:GetService("RunService").Stepped:Connect(function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character then
+        for _, part in pairs(player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = not noclipEnabled
+            end
+        end
+        if noclipEnabled then
+            local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
+            if rootPart and rootPart.Position.Y < workspace.FallenPartsDestroyHeight then
+                rootPart.CFrame = CFrame.new(rootPart.Position.X, 5, rootPart.Position.Z)
+            end
+        end
+    end
+end)
+
+channel:Toggle("Show Names", false, function(value)
+    toggleShowNames()
+end)
+
+
+local showNamesEnabled = false
+
+local function toggleShowNames()
+    showNamesEnabled = not showNamesEnabled
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if player.Character and player.Character:FindFirstChild("Head") then
+            local head = player.Character.Head
+            local billboardGui = head:FindFirstChild("NameTag")
+
+            if showNamesEnabled and not billboardGui then
+                billboardGui = Instance.new("BillboardGui", head)
+                billboardGui.Name = "NameTag"
+                billboardGui.Size = UDim2.new(0, 200, 0, 50)
+                billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+                billboardGui.AlwaysOnTop = true
+
+                local textLabel = Instance.new("TextLabel", billboardGui)
+                textLabel.Size = UDim2.new(1, 0, 1, 0)
+                textLabel.BackgroundTransparency = 1
+                textLabel.Text = player.Name
+                textLabel.TextColor3 = Color3.new(1, 1, 1)
+                textLabel.TextStrokeTransparency = 0
+                textLabel.TextSize = 16
+            elseif not showNamesEnabled and billboardGui then
+                billboardGui:Destroy()
+            end
+        end
+    end
+end
+
+cpec:Toggle("Show Names", false, function(value)
+    toggleShowNames()
+end)
+
+cur:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/CrapTheKid/Cursed-Islands-GUI-v2/main/Cursed%20Islands%20GUI%20v2'))()
+end)
+
+cur:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/superaceCZ/SmartTechnologies/main/SmartUi%3A%20Cursed%20Islands'))()
+end)
+
+cur:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+
+cur:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/superaceCZ/SmartTechnologies/main/SmartUi%3A%20Cursed%20Islands'))() 
+end)
+
+cur:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/CrapTheKid/Cursed-Islands-GUI-v2/main/Cursed%20Islands%20GUI%20v2'))()
+end)
+
+und:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/jsean1/lol/main/script"))()
+end)
+
+dor:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/no12356/doors-modes-room-and-floor/main/doors%20modes%20and%20floors'))() 
+end)
+
+natu:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://trackhub.ml/Main.lua'))()
+end)
+
+natu:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://pastefy.app/N2aDANrL/raw"))() 
+end)
+
+natu:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubLoader.lua"))()
+end)
+
+natu:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/MAIN'))() 
+end)
+
+natu:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://weinzspace.com/cata/hub.lua'))()
+end)
+
+natu:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/xaophf/xaohub-extra/main/xaoui'),true))()
+end)
+
+natu:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackingProject/CHHub/main/CHHub.lua"))()
+end)
+
+natu:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/NullProtector/NullProtector.github.io/main/Osy%20%7BProtected%20By%20Moonsec%5D"))()
+end)
+
+natu:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+end)
+
+natu:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", true))()
+end)
+
+dor:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Prison Life Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+ local Tab = Window:MakeTab({
+    Name = "Tab 1",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--[[
+Name =  - The name of the tab.
+Icon =  - The icon of the tab.
+PremiumOnly =  - Makes the tab accessible to Sirus Premium users only.
+]] local Section = Tab:AddSection({
+    Name = "Section"
+})
+
+--[[
+Name =  - The name of the section.
+]] Tab:AddButton({
+    Name = "Delete Doors!",
+    Callback = function()
+           game.Workspace.Doors:Destroy()   
+      end    
+})
+
+--[[
+Name =  - The name of the button.
+Callback =  - The function of the button.
+]] 
+end)
+
+dor:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Doors Loader", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local DoorsTab = Window:MakeTab({
+	Name = "Lots of Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+DoorsTab:AddButton({
+	Name = "Zooaphilics Gui",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
+      		print("button pressed")
+  	end    
+})
+
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "Have fun exploiting",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+DoorsTab:AddButton({
+	Name = "Vitamins Tool",
+	Callback = function()
+		getgenv().CustomVitamins = {
+			SpeedBoost = 7,
+			EffectDuration = 25
+		}
+		loadstring(game:HttpGet("https://pastebin.com/raw/qH9PEhfQ"))()
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Unlock Hardcore Mode",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/HardcoreScriptDOORS/main/HardcoreModeScript'))()
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Tablet",
+	Callback = function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/bucRxAMi'))()
+      		print("button pressed")
+  	end    
+})
+
+local Section = DoorsTab:AddSection({
+	Name = "Tablet Spawns in room 1"
+})
+
+local DoorsTab = Window:MakeTab({
+	Name = "Screech Morph",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+DoorsTab:AddButton({
+	Name = "Screech Morph",
+	Callback = function()
+		local Screech = game:GetService("ReplicatedStorage").Entities.Screech:Clone()
+for i,v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "Screech" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Transparency = 1
+    end
+    if v:IsA("Part") then
+        v.Transparency = 1
+    end
+    if v:IsA("Accessory") then
+        v:Destroy()
+    end
+    game.Players.LocalPlayer.Character.Head.face.Transparency = 1
+end
+Screech.Parent = game.Workspace
+game:GetService("RunService").RenderStepped:Connect(function()
+   Screech:PivotTo(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0.2, -1.25))
+end)
+Screech.AnimationController:LoadAnimation(Screech.Animations.Idle):Play()
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Ambush Morph",
+	Callback = function()
+		local Ambush = game:GetObjects("rbxassetid://12227536887")[1]
+for i,v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "Ambush" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Transparency = 1
+    end
+    if v:IsA("Part") then
+        v.Transparency = 1
+    end
+    if v:IsA("Accessory") then
+        v:Destroy()
+    end
+    game.Players.LocalPlayer.Character.Head.face.Transparency = 1
+end
+Ambush.Parent = game.Workspace
+Ambush.Torso.Anchored = true
+game:GetService("RunService").RenderStepped:Connect(function()
+    Ambush:PivotTo(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 1, 0))
+    game.Workspace.CurrentCamera.CFrame = (game.Players.LocalPlayer.Character.Head.CFrame * CFrame.Angles(math.rad(-30),0,0)) * CFrame.new(0,0.5,10)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+end)
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Terminal Vibes",
+	Callback = function()
+        -- Leave a like if you enjoyed!
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/loadstring.lua"))()
+
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Banna Gun",
+	Callback = function()
+        getgenv().BananaGunSettings = {
+            BananaSpeed = 100,
+            BananaAmount = 1
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MasterOogway6147/Scripts/main/Doors/Kardin%20Hong/Banana%20Gun/Banana%20Gun.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Plaemen Entity Spawner",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI'))()
+
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Crucifix",
+	Callback = function()
+        
+
+
+--// Tweakable values
+
+_G.Uses = 1
+_G.Range = 50.5
+
+local Uses = _G.Uses
+
+--// haha define stuff
+
+local tweensv = game:GetService("TweenService")
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local Hum = Character.Humanoid
+
+local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+	camara.CFrame = camara.CFrame * shakeCf
+end)
+	
+camShake:Start()
+
+--// main code
+
+local ToolFunctions = {
+     OnClick = function() end,
+     OnEquip = function() end,
+     OnUnequipped = function() end,
+}
+
+local MainModels = game:GetObjects("rbxassetid://12424097714")[1]
+MainModels.Parent = game.ReplicatedStorage
+
+local Tool_obj = MainModels.Crucifix
+local ToolHandle = Tool_obj:WaitForChild("Handle",5)
+
+local Portal = MainModels.Repentance
+
+
+ToolHandle.Anchored = false
+
+local Cooldown = false
+local Equipped = false
+
+--// Tool events
+
+ToolFunctions.OnClick = function()
+	
+end
+
+ToolFunctions.OnEquip = function()
+
+	Equipped = true
+	
+
+	
+	--make it so you can hell entities
+	
+	
+	spawn(function()
+	repeat
+	task.wait(.1)
+		local thing,_D = entity_check()
+	
+		if thing and not thing:GetAttribute("BeingSentToBrazil") and _D < _G.Range and Equipped then
+			
+			camShake:Start()
+			camShake:ShakeOnce(10,30,0.7,0.5)
+			
+			local Haw = ToolHandle:Clone()
+			Haw.Parent = workspace
+
+			
+			if Uses == 1 then
+				Equipped = false
+				
+				Tool_obj:Destroy()
+			else
+			
+				Tool_obj.Parent = Player.Backpack
+				
+				Equipped = false
+				
+				Uses -= 1
+			end
+			
+			thing:SetAttribute("StopMovement",true)
+			thing:SetAttribute("BeingSentToBrazil",true)
+			
+			hell(thing)
+		end
+	until Equipped == false
+end)
+	
+	
+	Player:SetAttribute("Hidden",true)
+	
+	
+	
+end
+
+ToolFunctions.OnUnequipped = function()
+	Equipped = false
+	
+	Player:SetAttribute("Hidden",false)
+end
+
+
+
+
+Tool_obj.Equipped:Connect(function()
+	ToolFunctions.OnEquip()
+end)
+
+Tool_obj.Activated:Connect(function()
+	ToolFunctions.OnClick()
+end)
+
+Tool_obj.Unequipped:Connect(function()
+	ToolFunctions.OnUnequipped()
+end)
+
+
+function entity_check()
+	local closestDistance, closestObject = math.huge, nil
+		for _, part in ipairs(workspace:GetDescendants()) do
+			if part:IsA("Model") then
+				local part1 = part:GetAttribute("IsCustomEntity")
+				if part1 then
+					local distance = game.Players.LocalPlayer:DistanceFromCharacter(part.PrimaryPart.Position)
+						if distance < closestDistance then
+						closestDistance = distance
+						closestObject = part
+					end
+					
+				end
+			end
+		end
+	return closestObject, closestDistance
+end
+
+
+function hell(oldentity)
+	local entity
+	
+
+	entity = oldentity:Clone()
+	entity.Parent = workspace
+	entity.Name = "Fake"..oldentity.Name
+	
+	oldentity:Destroy()
+
+	
+	local primary = entity.PrimaryPart or entity:FindFirstChildOfClass("Part")
+
+	--CAST A RAY
+	
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Blacklist
+	params.FilterDescendantsInstances = { Character, entity }
+		
+	local ray = workspace:Raycast(primary.Position, Vector3.new(0,-1,0) * 20, params)
+		
+
+	
+	
+	local gate = Portal:Clone()
+	gate.Parent = workspace
+	
+	local pentagram = gate.Pentagram
+
+	if ray then
+		local part = Instance.new("Part")
+		part.Anchored = true
+		part.Position = ray.Position + Vector3.new(0, 1, 0)
+		
+		gate:PivotTo(part.CFrame * CFrame.new(0, -0.5, 0) * CFrame.Angles(0, 0, 0))
+		
+		part:Destroy()
+	end
+	
+	--Spinning
+
+
+	local spinrate = 2
+	local crucifix_spin = Instance.new("NumberValue")
+	local spinrate_changed = Instance.new("NumberValue")
+	
+	local gate_spin = game:GetService("RunService").Heartbeat:Connect(function()
+		pentagram.RingAddonA.Orientation += Vector3.new(0, spinrate, 0)
+		pentagram.RingAddonB.Orientation += Vector3.new(0, -spinrate, 0)
+		pentagram.RingAddonC.Orientation += Vector3.new(0, spinrate * 0.8, 0)
+		pentagram.Base.Orientation += Vector3.new(0, -spinrate * 0.5, 0)
+		
+		gate.Crucifix.Glow.Orientation += Vector3.new(0, crucifix_spin.Value, 0)
+	end)
+	
+	spinrate_changed.Changed:Connect(function(V)
+		spinrate = V
+	end)
+	
+	for _,v in pairs(entity:GetDescendants()) do
+		if v:IsA("BasePart") then 
+			v.Anchored = true
+			--v.Position = gate.Entity.Position + Vector3.new(0, 2, 0)
+		end
+	end
+	
+	local Stored = gate.Crucifix.Glow.CFrame  
+	
+	gate.Crucifix.Glow.Sound.TimePosition = 0
+	gate.Crucifix.Glow.SoundFail.TimePosition = 0
+	
+	gate.Crucifix.Glow.Sound.SoundId = "rbxassetid://6555668806"
+	gate.Crucifix.Glow.SoundFail.SoundId = "rbxassetid://6555668806"
+	
+	gate.Crucifix.Glow.Sound:Play()
+	
+	gate.Crucifix.Glow.CFrame = ToolHandle.CFrame
+	
+	local C = Player.Character
+	local NewPos = C.HumanoidRootPart.CFrame * CFrame.new(0, 3.5, -6)
+	
+	spawn(function()
+		
+		tweensv:Create(gate.Crucifix.Glow, TweenInfo.new(1.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			--CFrame = Stored,
+			CFrame = NewPos,
+		}):Play()
+		
+		task.wait(.6)
+		
+		tweensv:Create(crucifix_spin, TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+				Value = 50,
+			}):Play()
+	end)
+	
+	spawn(function()
+		
+		task.wait(1)
+		
+		tweensv:Create(gate.Crucifix.Glow.Light, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			Range = 15,
+			Brightness = 3
+		}):Play()
+	end)
+	
+
+	tweensv:Create(pentagram.Circle, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+		Position = pentagram.Circle.Position - Vector3.new(0, 10, 0),
+	}):Play()
+
+	camShake:ShakeOnce(10,15,4,5)
+
+	tweensv:Create(spinrate_changed, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Value = 5,
+		}):Play()
+
+	--[[
+	
+	tweensv:Create(crucifix_spin, TweenInfo.new(6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Value = 50,
+		}):Play()
+		
+	]]
+	
+	local function move(part)
+		tweensv:Create(gate.Entity, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			Position = gate.Entity.Position + Vector3.new(0,5,0),
+		}):Play()
+		
+		tweensv:Create(part, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			Position = part.Position + Vector3.new(0,5,0),
+		}):Play()
+		
+		tweensv:Create(pentagram.Base.LightAttach.Light, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			Range = 60,
+			Brightness = 5
+		}):Play()
+	
+		task.wait(3)
+	
+		tweensv:Create(part, TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Position = part.Position - Vector3.new(0,50,0),
+		}):Play()
+		
+		
+		tweensv:Create(gate.Entity, TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Position = gate.Entity.Position - Vector3.new(0,50,0),
+		}):Play()
+		
+		
+		
+		
+		--Sound fade
+		
+		for _,v in pairs(entity:GetDescendants()) do
+			if v:IsA("Sound") then
+				tweensv:Create(v, TweenInfo.new(.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+					Volume = 0,
+				}):Play()
+			elseif v:IsA("Light") then
+				tweensv:Create(v, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+					Range = 0,
+				}):Play()
+			end
+		end
+		
+		task.wait(1)
+		
+		tweensv:Create(gate.Crucifix.Glow.Light, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Brightness = 25,
+			Range = 30,
+		}):Play()
+		
+		tweensv:Create(pentagram.Base.LightAttach.Light, TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			Range = 0,
+			Brightness = 2
+		}):Play()
+		
+		--Gate
+		
+		tweensv:Create(spinrate_changed, TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Value = 0,
+		}):Play()
+		
+		for _,v in pairs(pentagram:GetChildren()) do
+			if v.Name == "BeamFlat" then
+				spawn(function()
+					if v:GetAttribute("Delay") ~= 0 then
+						task.wait(v:GetAttribute("Delay"))
+					end
+					
+					tweensv:Create(v, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+							Brightness = 0,
+						}):Play()
+					
+				end)
+			end
+		end
+		
+		
+	
+	end
+	
+	--Entity fix
+
+	for _,v in pairs(entity:GetDescendants()) do
+		if v:IsA("BasePart") then
+			spawn(function()
+				move(v)
+			end)
+		end	
+	end
+	
+	
+	
+	
+	
+	--Portal closing
+	
+	spawn(function()
+		
+		task.wait(5)
+	
+		tweensv:Create(crucifix_spin, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+			Value = 0,
+		}):Play()
+		
+		task.wait(1.5)
+
+		--Crucifix
+		
+		tweensv:Create(gate.Crucifix.Glow.Light, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Brightness = 0,
+			Range = 60,
+		}):Play()
+		
+		camShake:ShakeOnce(3,10,0.7,0.5)
+		
+		gate.Crucifix.Glow.ExplodeParticle:Emit(50)
+		
+		tweensv:Create(gate.Crucifix.Glow, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Size = gate.Crucifix.Glow.Size * 4,
+		}):Play()
+		
+		tweensv:Create(gate.Crucifix.Glow, TweenInfo.new(1.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Transparency = 1,
+		}):Play()
+		
+		task.wait(5)
+		
+		gate:Destroy()
+	
+		gate_spin:Disconnect()
+	end)
+	
+	
+	task.wait(10)
+	
+	
+	entity:Destroy()
+end
+
+
+
+Tool_obj.Parent = Player.Backpack
+      		print("button pressed")
+  	end    
+})
+
+DoorsTab:AddButton({
+	Name = "Morph Gui",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/RmdComunnityScriptsProvider/AngryHub/main/DoorsMorphScript.lua'))()
+      		print("button pressed")
+  	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+OrionLib:Init() 
+end)
+
+dor:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/neverlose.xyz/main/Doors.lua"))() 
+end)
+
+dor:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/Doors",true))() 
+end)
+
+dor:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://rawscripts.net/raw/DOORS-FFJ-Hub-11365'))() 
+end)
+
+dor:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/althan99/doors-entity-spawner/main/Script"))() 
+end)
+
+dor:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/D4rk9690/My-scripts/main/Doors%20gui", true))()
+end)
+
+dor:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/ShadowScripts4Roblox/PROTECTEDLUA/main/Scripts/DOORS/Loader52.lua'))()
+end)
+
+dor:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))() 
+end)
+
+dor:Button("11", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/LeoVerem14/Doors-script/main/Main")))()
+end)
+
+dor:Button("12", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+end)
+
+kat:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))()
+end)
+
+kat:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+end)
+
+kat:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/FlmesCoding/SwirlHub/main/Loader.lua'))()
+end)
+
+kat:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Alech01/Push-Simulator-By-SOuly/main/Push%20Simulator%20By%20Souly')))()
+end)
+
+kat:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AndrewDarkyy/NOWAY/main/darkyyware.lua"))()
+end)
+
+kat:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/MrPectable/MrPectableSource/main/v1.lua')))() 
+end)
+
+kat:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+end)
+
+kat:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/zReal-King/Knife-Ability-Test/main/Gui'))()
+end)
+
+kat:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/FlmesCoding/Loader/main/update2.lua'))()
+end)
+
+kat:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/MrPectable/MrPectable/main/MrPectable.lua"))()
+end)
+
+ml:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))()
+end)
+
+ml:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AliCode14/scripts/main/ScriptHub.lua"))()
+end)
+
+ml:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Gigachad%20hub%20V5'))()
+end)
+
+ml:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/stuffman0001/CanHub/main/Code"))()
+end)
+
+ml:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  _G.WEBHOOKLOG = "" -- Webhook (For Bloxfruits)
+
+loadstring(Game:HttpGet"https://raw.githubusercontent.com/JJTChannel/JJTxHUB/main/Re-come.lua")()
+end)
+
+ml:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/NETFLIX89/Watermelon-hub/main/melonhub'))()
+end)
+
+ml:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/ScriptHub/main/KeySystem"))()
+end)
+
+ml:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+end)
+
+ml:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Vice1337/free-scripts-for-roblox/main/Muscle-Legends-3623096087"))()
+end)
+
+ml:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/Soffware/3kTMd/main/HadesHub.lua"),true))()
+end)
+
+ml:Button("11", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/littlegui/main/MuscleLegends"))()
+end)
+
+ml:Button("12", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+end)
+
+ml:Button("13", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))() 
+end)
+
+ml:Button("14", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Muscle-Legends'),true))() 
+end)
+
+ml:Button("15", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Unique-Hub-(14-Gmes)_521"))() 
+end)
+
+lb:Button("1", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/PlanetHubX/Lucky-Blocks/main/source", true))() 
+end)
+
+lb:Button("2", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Monke90/Lucky-Blocks/main/Monkeyware"))()   
+end)
+
+lb:Button("3", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/PlanetHubX/Lucky-Blocks/main/source", true))() 
+end)
+
+lb:Button("4", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KaizerQuasar/Project-Quasar/main/Lucky-Lucky.lua"))() 
+end)
+
+lb:Button("5", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Oxwoey/lucky-block-v1/main/script%20v1%20beta"))() 
+end)
+
+lb:Button("6", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://github.com/bruhhwtf/LUCKY-BLOCKS-Battlegrounds-GUI/raw/main/Main"))()
+end)
+
+lb:Button("7", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/arlists/Sky-Hub/main/Main", true))() 
+end)
+
+lb:Button("8", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxys3rrV/jaydens-hub/main/script"))() 
+end)
+
+lb:Button("9", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingResources/GamingResources-Script-Hub/main/Key%20System", true))()  
+end)
+
+lb:Button("10", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/kMO21/ez/main/Scriptlol"), true))()
+end)
+
+lb:Button("11", function()
+DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/03koios/Loader/main/Loader.lua"))() 
+end)
 
 mm2:Button("1", function()
 DiscordLib:Notification("Inject!", "Get funny<3", "GalaxyHub✓")
