@@ -17,7 +17,7 @@ local autoclickEnabled = false
 local autoclickLoop = function()
     while autoclickEnabled do
         game:GetService("ReplicatedStorage").Remotes.Clicker:FireServer()
-        wait(0.000001)
+        wait(0.00000000001)
     end
 end
 
@@ -46,7 +46,7 @@ Tab:AddToggle({
             autobirthEnabled = true
             while autobirthEnabled do
                 game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
-                wait(0.1)
+                wait(0.01)
             end
         else
             autobirthEnabled = false
@@ -65,7 +65,7 @@ local Section = TpTab:AddSection({
 })
 
 TpTab:AddButton({
-	Name = "2 Loka",
+	Name = "2 loka",
 	Callback = function()
       		local player = game.Players.LocalPlayer
 local teleportLocation = CFrame.new(Vector3.new(-196, 10, 2))
@@ -124,6 +124,26 @@ player.Character:MoveTo(teleportLocation.Position)
   	end    
 })
 
+TpTab:AddButton({
+	Name = "8 loka",
+	Callback = function()
+      	local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-960, 10, 7))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+TpTab:AddButton({
+	Name = "9 loka",
+	Callback = function()
+      	local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-1066, 10, 29))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
 local DiamondTab = Window:MakeTab({
     Name = "Diamonds",
     Icon = "rbxassetid://4483345998",  
@@ -154,6 +174,112 @@ DiamondTab:AddButton({
 
 game:GetService("ReplicatedStorage").Remotes.GemUpgrade:FireServer(unpack(args))
 	  end    
+})
+
+local EggsTab = Window:MakeTab({
+    Name = "Open Eggs",
+    Icon = "rbxassetid://4483345998",  
+    PremiumOnly = false
+})
+
+local Section = EggsTab:AddSection({
+    Name = "Пошел"
+})
+
+EggsTab:AddButton({
+	Name = "Cactus (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Cactus Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
+})
+
+EggsTab:AddButton({
+	Name = "Watet (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Water Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+ 	end    
+})
+
+EggsTab:AddButton({
+	Name = "Futuristic (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Futuristic Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
+})
+
+EggsTab:AddButton({
+	Name = "Candy (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Candy Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
+})
+
+EggsTab:AddButton({
+	Name = "Magma (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Magma Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+ 	end    
+})
+
+EggsTab:AddButton({
+	Name = "Winter (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Winter Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
+})
+
+EggsTab:AddButton({
+	Name = "Void (x3 eggs) bug gui need rejoin",
+	Callback = function()
+	    local args = {
+    [1] = "Void Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
+})
+
+EggsTab:AddButton({
+	Name = "Stand (x3 eggs)",
+	Callback = function()
+	    local args = {
+    [1] = "Stand Egg",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer(unpack(args))
+	 end    
 })
 
 
