@@ -1,0 +1,161 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Hamster Clicker By Youkiih", HidePremium = false, Intro = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+    Name = "Auto Farm",
+    Icon = "rbxassetid://4483345998",  
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+    Name = "Farm"
+})
+
+local autoclickEnabled = false
+
+local autoclickLoop = function()
+    while autoclickEnabled do
+        game:GetService("ReplicatedStorage").Remotes.Clicker:FireServer()
+        wait(0.000001)
+    end
+end
+
+Tab:AddToggle({
+    Name = "AutoClick",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+        if Value == true then
+            autoclickEnabled = true
+            autoclickLoop()
+        else
+            autoclickEnabled = false
+        end
+    end    
+})
+
+local autobirthEnabled = false
+
+Tab:AddToggle({
+    Name = "AutoRebith",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+        if Value == true then
+            autobirthEnabled = true
+            while autobirthEnabled do
+                game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
+                wait(0.1)
+            end
+        else
+            autobirthEnabled = false
+        end
+    end    
+})
+
+local TpTab = Window:MakeTab({
+    Name = "Locate",
+    Icon = "rbxassetid://4483345998",  
+    PremiumOnly = false
+})
+
+local Section = TpTab:AddSection({
+    Name = "Locate"
+})
+
+TpTab:AddButton({
+	Name = "2 Loka",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-196, 10, 2))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+TpTab:AddButton({
+	Name = "3 loka",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-282, 10, -7))
+
+		player.Character:MoveTo(teleportLocation.Position)
+	  end    
+})
+
+TpTab:AddButton({
+	Name = "4 loka",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-419, 10, -6))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+TpTab:AddButton({
+	Name = "5 loka",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-566, 10, 6))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+TpTab:AddButton({
+	Name = "6 loka",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-697, 10, 8))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+TpTab:AddButton({
+	Name = "7 loka",
+	Callback = function()
+      	local player = game.Players.LocalPlayer
+local teleportLocation = CFrame.new(Vector3.new(-822, 10, 0))
+
+player.Character:MoveTo(teleportLocation.Position)
+  	end    
+})
+
+local DiamondTab = Window:MakeTab({
+    Name = "Diamonds",
+    Icon = "rbxassetid://4483345998",  
+    PremiumOnly = false
+})
+
+local Section = DiamondTab:AddSection({
+    Name = "Diamond Shop"
+})
+
+DiamondTab:AddButton({
+	Name = "Speed (need diamonds)",
+	Callback = function()
+		local args = {
+    [1] = "1"
+}
+
+game:GetService("ReplicatedStorage").Remotes.GemUpgrade:FireServer(unpack(args))
+	  end    
+})
+
+DiamondTab:AddButton({
+	Name = "multiplayer (need diamonds)",
+	Callback = function()
+		local args = {
+    [1] = "2"
+}
+
+game:GetService("ReplicatedStorage").Remotes.GemUpgrade:FireServer(unpack(args))
+	  end    
+})
+
+
+
+OrionLib:Init()
