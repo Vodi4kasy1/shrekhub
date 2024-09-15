@@ -17,7 +17,7 @@ local autoclickEnabled = false
 local autoclickLoop = function()
     while autoclickEnabled do
         game:GetService("ReplicatedStorage").Remotes.Clicker:FireServer()
-        wait(0.00000000000000001)
+        wait(0.001)
     end
 end
 
