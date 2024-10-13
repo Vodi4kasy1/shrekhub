@@ -1,0 +1,410 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+--Notfy
+OrionLib:MakeNotification({
+	Name = "Привет!",
+	Content = "Спасибо что выбрал мой хаб",
+	Image = "rbxassetid://84819046623447",
+	Time = 8
+})
+
+OrionLib:MakeNotification({
+	Name = "Тг",
+	Content = "https://t.me/robloxscriptdeltafluxusacerus",
+	Image = "rbxassetid://84819046623447",
+	Time = 15
+})
+
+local Window = OrionLib:MakeWindow({Name = "HENY Script Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+--Tabs
+local HelloTab = Window:MakeTab({
+	Name = "Hello",
+	Icon = "rbxassetid://84819046623447",
+	PremiumOnly = false
+})
+
+local ybaTab = Window:MakeTab({
+	Name = "YBA",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local mm2Tab = Window:MakeTab({
+	Name = "MM2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local katTab = Window:MakeTab({
+	Name = "KAT",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local bfTab = Window:MakeTab({
+	Name = "Blox Fruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local mvsTab = Window:MakeTab({
+	Name = "Murder Vs Sheriff Duel",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local psTab = Window:MakeTab({
+	Name = "Pet Simulator 99",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local bhTab = Window:MakeTab({
+	Name = "BrookHaven",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local arTab = Window:MakeTab({
+	Name = "Arsenal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local doTab = Window:MakeTab({
+	Name = "Doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local bbTab = Window:MakeTab({
+	Name = "Blade Ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local babTab = Window:MakeTab({
+	Name = "Build A Boat,
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local mlTab = Window:MakeTab({
+	Name = "Muscle Legends",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local msTab = Window:MakeTab({
+	Name = "Meme Sea",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local troTab = Window:MakeTab({
+	Name = "The Rakoff",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local amTab = Window:MakeTab({
+	Name = "Adopt Me",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local credTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+--Buttons
+ybaTab:AddButton({
+	Name = "Bith Boy V3",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
+  	end    
+})
+
+ybaTab:AddButton({
+	Name = "Void Gaster",
+	Callback = function()
+      		_G.Options = {
+    ["ToggleKey"] = "Delete",
+}
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/VoidGaster/Scripts/main/" .. tostring(game.PlaceId)),true))()
+  	end    
+})
+
+ybaTab:AddButton({
+	Name = "???"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "YARHM",
+     	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-YARHM-12403"))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "Prosto Hub",
+     	loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "Prosto Hub",
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "Highlight OP",
+     	if loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Main"))() then
+     	  print("Key - hlvipcomingsoon")
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "Highlight lite no key",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Lite"))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "MyArray v6 op",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/ArrayField/main/MyArrayV6"))()
+  	end    
+})
+
+mm2Tab:AddButton({
+	Name = "ANK9",
+     	 loadstring(game:HttpGet("https://pastebin.com/raw/Ank9v7hz"))()
+  	end    
+})
+
+katTab:AddButton({
+	Name = "Aquaware",
+     	 loadstring(game:HttpGet('https://raw.githubusercontent.com/whiteinian/Aquaware/main/Main.lua'))()
+  	end    
+})
+
+katTab:AddButton({
+	Name = "Discopro",
+     	 loadstring(game:HttpGet('https://raw.githubusercontent.com/discopro/open-source/main/dreamybull.lua'))()
+  	end    
+})
+
+mvsTab:AddButton({
+	Name = "Murder Vs Sheriff Duel",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/un_QuantumIXBYPASSBYBYFRON.COM", true))()
+  	end    
+})
+
+bfTab:AddButton({
+	Name = "Domadic",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()
+  	end    
+})
+
+bfTab:AddButton({
+	Name = "Auto Farm",
+     	 loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-AUTOFARM-GUI-19159"))()
+  	end    
+})
+
+bfTab:AddButton({
+	Name = "Auto Farm",
+     	 loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-Stingray-Keyless-Autofarm-17241"))()
+  	end    
+})
+
+bfTab:AddButton({
+	Name = "Strike Hub",
+     	 getgenv().Color = Color3.fromRGB(0, 128, 255)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
+  	end    
+})
+
+psTab:AddButton({
+	Name = "ZapHub",
+     	 loadstring(game:HttpGet('https://www.zaphub.xyz/Exec'))()
+  	end    
+})
+
+psTab:AddButton({
+	Name = "AppleHubOnTop",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/AppleHubOnTop/main/Loader.lua"))() 
+  	end    
+})
+
+psTab:AddButton({
+	Name = "Zer0Hub",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+  	end    
+})
+
+psTab:AddButton({
+	Name = "RedzHub",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+  	end    
+})
+
+psTab:AddButton({
+	Name = "ZekromHub",
+     	 loadstring(Game:HttpGet"https://raw.githubusercontent.com/ahmadsgamer2/Zekrom-Hub-X/main/Zekrom-Hub-X-exe")()
+  	end    
+})
+
+bhTab:AddButton({
+	Name = "Ahg2",
+     	 loadstring(game:HttpGet("https://pastebin.com/raw/AHg2NLqG"))()
+  	end    
+})
+
+bhTab:AddButton({
+	Name = "ssswool",
+     	 loadstring(game:HttpGet('https://raw.githubusercontent.com/woopstwq/ssswool/main/77_ICLH0U4.lua'))()
+  	end    
+})
+
+bhTab:AddButton({
+	Name = "proomans",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/pormansutility/PormansBrookhaven/main/BrookhavenV1Keyless"))()
+  	end    
+})
+
+bhTab:AddButton({
+	Name = "redz",
+     	 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/jf7iaXpH')))()
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local Window = OrionLib:MakeWindow({Name = "REDz HUB : "..gameName, HidePremium = false, SaveConfig = true, ConfigFolder = "teste"})
+
+local REDz = Window:MakeTab({Name = "Main",Icon = "rbxassetid://13687632207",PremiumOnly = false})
+
+REDz:AddButton({Name = "REDz HUB v3.2.2 In English",Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/HR/main/REDzHUBeng"))()
+end})
+
+REDz:AddButton({Name = "REDz HUB v3.2.2 em PortuguÃªs",Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+end})  	end    
+})
+
+bhTab:AddButton({
+	Name = "Moon",
+     	 loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+  	end    
+})
+
+arTab:AddButton({
+	Name = "thaibo",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+  end    
+})
+
+arTab:AddButton({
+	Name = "Ayvee",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/sytsytdispatch/Ayvee-Client/main/maingui.lua"))()
+  end    
+})
+
+arTab:AddButton({
+	Name = "AdvanceTech",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
+  end    
+})
+
+arTab:AddButton({
+	Name = "8y",
+       loadstring(game:HttpGet("https://pastebin.com/raw/8ysy7ENG",true))()
+  end    
+})
+
+arTab:AddButton({
+	Name = "th",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))("https://t.me/KrutoySuslik")
+  end    
+})
+
+doTab:AddButton({
+	Name = "Youmira",
+       loadstring(game:HttpGet"https://raw.githubusercontent.com/Yumiara/Python/refs/heads/main/Door.py")()
+  end    
+})
+
+doTab:AddButton({
+	Name = "r8q",
+       loadstring(game:HttpGetAsync("https://pastebin.com/raw/R8QMbhzv"))()
+  end    
+})
+
+doTab:AddButton({
+	Name = "gy5",
+       loadstring(game:HttpGet(('https://pastebin.com/raw/GY5dvcJq')))()
+  end    
+})
+
+doTab:AddButton({
+	Name = "Vania",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/loader.lua", true))() 
+  end    
+})
+
+doTab:AddButton({
+	Name = "gy5",
+       loadstring(game:HttpGet(('https://pastebin.com/raw/GY5dvcJq')))() 
+  end    
+})
+
+bbTab:AddButton({
+	Name = "Corolla",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/7190000/Corolla-Hub/main/ch.lua"))()Â 
+  end    
+})
+
+bbTab:AddButton({
+	Name = "Soy",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SoyAdriYT/AstroX/main/Loader.lua", true))() 
+  end    
+})
+
+bbTab:AddButton({
+	Name = "redz",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/eng"))()
+  end    
+})
+
+bbTab:AddButton({
+	Name = "y3mg",
+       loadstring(game:HttpGet("https://pastefy.app/y3MGGd9n/raw"))() 
+  end    
+})
+
+bbTab:AddButton({
+	Name = "r3th",
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
+  end    
+})
+
+babTab:AddButton({
+	Name = "Exy",
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/ExyXyz/ExyGantenk/main/ExyBABFT"))() 
+  end    
+})
+
+babTab:AddButton({
+	Name = "auto bild",
+       loadstring(game:HttpGet(("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt"),true))()
+  end    
+})
+
+--labels
+CredTab:AddLabel("Привет! Спасибо что используешь мой скрипт")
+CredTab:AddLabel("Мой Тг - https://t.me/robloxscriptdeltafluxusacerus")
+CredTab:AddLabel("By HENY Script")
+HelloTab:AddLabel("By HENY Script")
+HelloTab:AddLabel("Привет! Спасибо за использывания моего скрипта")
+HelloTab:AddLabel("Если ты хотел бы попросить добавить какой нибудь скрипт на игру пиши снизу")
+HelloTab:AddLabel("@Youkiih")
