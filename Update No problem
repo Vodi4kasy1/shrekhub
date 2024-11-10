@@ -779,3 +779,91 @@ end)
 tab3.newButton("Script", "Build A Bridge Simulator", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectpopCat/ywxoscripts/main/BuildABridgeSim2931.lua"))()
 end)
+
+tab3.newLabel("Da Hood")
+
+tab3.newButton("Script", "Da Hood", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+end)
+
+tab3.newButton("Script", "Da Hood", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NathTheDev/AlysseAndroid/main/loader.lua"))()
+end)
+
+tab3.newButton("Script", "Da Hood", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RYZZCHIPSX/ryzzchips/main/beamed%20ware%20script"))();
+end)
+
+tab3.newLabel("Pets Go")
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))() 
+end)
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SenhorLDS/ProjectLDSHUB/main/OfficialScript'))()
+end)
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectpopCat/ywxoscripts/main/825PetsG0.lua"))()
+end)
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+end)
+
+tab3.newLabel("Five Night TD")
+
+tab3.newButton("Script", "Five Night TD", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua', true))()
+end)
+
+tab3.newButton("Script", "Five Night TD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+end)
+
+tab3.newLabel("Fisch")
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://noname-hub.fun/loader.lua"))()
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/Python/main/Main.lua"))(); 
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Lythicals/script/main/Fisch.lua")()
+end)
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjectpopCat/ywxoscripts/main/825PetsG0.lua"))()
+end)
+
+tab3.newButton("Script", "Pets Go", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+end)
+
+tab3.newLabel("Five Night TD")
+
+tab3.newButton("Script", "Five Night TD", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua', true))()
+end)
+
+tab3.newButton("Script", "Five Night TD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+end)
+
+tab3.newLabel("Fisch")
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://noname-hub.fun/loader.lua"))()
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/Python/main/Main.lua"))(); 
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Lythicals/script/main/Fisch.lua")()
+end)
