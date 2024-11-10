@@ -15,6 +15,8 @@ local tab4 = DrRayLibrary.newTab("Спец", "ImageIdHere")
 
 tab.newLabel("Добавленно: Телепорты, Скрипты, Вх, Спец")
 
+tab.newLabel("Скоро: Скрипты на 'Adopt Me, Muscle Legends, Build A Boat, Hamster Clicker, Brookhaven'")
+
 tab.newLabel("Создал: No Problem, Помогал: Heny")
 
 tab.newButton("Тг Канал Heny", "при нажатии копирует тг канал Heny", function()
