@@ -859,13 +859,13 @@ end)
 tab3.newLabel("Fisch")
 
 tab3.newButton("Script", "Fisch", function()
-    loadstring(game:HttpGet("https://noname-hub.fun/loader.lua"))()
-end)
-
-tab3.newButton("Script", "Fisch", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/Python/main/Main.lua"))(); 
-end)
-
-tab3.newButton("Script", "Fisch", function()
     loadstring(game:HttpGet"https://raw.githubusercontent.com/Lythicals/script/main/Fisch.lua")()
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitler69/InfiniteWare/refs/heads/main/Fisch",true))()
+end)
+
+tab3.newButton("Script", "Fisch", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yolobradda/fischjvrre/refs/heads/main/fishrelease"))()
 end)
