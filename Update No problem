@@ -19,8 +19,6 @@ tab.newLabel("Скоро: Скрипты на 'Adopt Me, Muscle Legends, Build A
 
 tab.newLabel("Создал: No Problem, Помогал: Heny")
 
-tab.newLabel("Вова Адидас Соси Пенис Даун")
-
 --tab.newButton("Тг Канал Heny", "при нажатии копирует тг канал Heny", function()
 --    setclipboard("https://t.me/robloxscriptdeltafluxusacerus")
 --end)
