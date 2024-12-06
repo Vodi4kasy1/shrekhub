@@ -1,0 +1,131 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Shrek Horror", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Free script")
+Tab:AddLabel("Last update 06/12/2024")
+
+Tab:AddButton({
+	Name = "Copy link to site",
+	Callback = function()
+		local link = "https://shrekhorror.tilda.ws/"
+		setclipboard(link)
+		print("Link copied to clipboard: " .. link)
+	end    
+})
+
+-- Переменные для начальных значений
+local defaultSpeed = 16
+local defaultJump = 50
+
+-- Функции изменения параметров
+local function setSpeed(speed)
+	local player = game.Players.LocalPlayer
+	if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+		player.Character.Humanoid.WalkSpeed = speed
+	else
+		warn("Player not found or Humanoid missing.")
+	end
+end
+
+local function setJump(jump)
+	local player = game.Players.LocalPlayer
+	if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+		player.Character.Humanoid.JumpPower = jump
+	else
+		warn("Player not found or Humanoid missing.")
+	end
+end
+
+-- Дропдаун для скорости
+Tab1:AddDropdown({
+	Name = "Set Speed",
+	Default = "Default",
+	Options = {"16", "32", "50", "100"},
+	Callback = function(selected)
+		setSpeed(tonumber(selected))
+	end
+})
+
+-- Дропдаун для прыжка
+Tab1:AddDropdown({
+	Name = "Set Jump Power",
+	Default = "Default",
+	Options = {"50", "100", "200", "500"},
+	Callback = function(selected)
+		setJump(tonumber(selected))
+	end
+})
+
+-- Кнопка для сброса значений
+Tab1:AddButton({
+	Name = "Reset Speed and Jump",
+	Callback = function()
+		setSpeed(defaultSpeed)
+		setJump(defaultJump)
+		print("Speed and Jump reset to default values.")
+	end
+})
+
+-- Функция добавления ESP
+local function addESP(player)
+	if player ~= game.Players.LocalPlayer and player.Character then
+		local highlight = Instance.new("Highlight")
+		highlight.Parent = player.Character
+		highlight.Adornee = player.Character
+		highlight.FillColor = Color3.new(1, 0, 0)
+		highlight.OutlineColor = Color3.new(1, 1, 1)
+	end
+end
+
+Tab1:AddButton({
+	Name = "Enable ESP",
+	Callback = function()
+		for _, player in ipairs(game.Players:GetPlayers()) do
+			addESP(player)
+			player.CharacterAdded:Connect(function()
+				addESP(player)
+			end)
+		end
+		print("ESP enabled for all players.")
+	end
+})
+
+-- Функция для телепортации
+local function teleportPlayer(x, y, z)
+	local player = game.Players.LocalPlayer
+	if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(x, y, z)
+		print("Teleported to:", x, y, z)
+	else
+		warn("HumanoidRootPart not found. Teleport failed.")
+	end
+end
+
+-- Пример добавления кнопок с телепортацией
+Tab2:AddButton({
+	Name = "Колодец",
+	Callback = function()
+		teleportPlayer(7, 6, -10)
+	end
+})
+
+-- Добавьте остальные кнопки телепортации аналогично...
