@@ -1,0 +1,298 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Shrek Horror", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Free script")
+Tab:AddLabel("Last update 06/12/2024")
+
+Tab:AddButton({
+	Name = "Copy link to site",
+	Callback = function()
+		local link = "https://shrekhorror.tilda.ws/" -- текст для копирования
+		setclipboard(link) -- Устанавливает текст в буфер обмена
+		print("Link copied to clipboard: " .. link)
+	end    
+})
+
+-- Переменные для начальных значений
+local defaultSpeed = 16
+local defaultJump = 50
+
+-- Функции изменения параметров
+local function setSpeed(speed)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+end
+
+local function setJump(jump)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
+end
+
+-- Дропдаун для скорости
+Tab1:AddDropdown({
+	Name = "Set Speed",
+	Default = "Default",
+	Options = {"16", "32", "50", "100"},
+	Callback = function(selected)
+		setSpeed(tonumber(selected))
+	end
+})
+
+-- Дропдаун для прыжка
+Tab1:AddDropdown({
+	Name = "Set Jump Power",
+	Default = "Default",
+	Options = {"50", "100", "200", "500"},
+	Callback = function(selected)
+		setJump(tonumber(selected))
+	end
+})
+
+-- Кнопка для сброса значений
+Tab1:AddButton({
+	Name = "Reset Speed and Jump",
+	Callback = function()
+		setSpeed(defaultSpeed)
+		setJump(defaultJump)
+		print("Speed and Jump reset to default values.")
+	end
+})
+
+-- Кнопка для телепортации
+Tab2:AddButton({
+	Name = "Колодец",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(7, 6, -10)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+-- ESP игроков
+local function addESP(player)
+	if player ~= game.Players.LocalPlayer then
+		local highlight = Instance.new("Highlight")
+		highlight.Parent = player.Character or player.CharacterAdded:Wait()
+		highlight.Adornee = player.Character
+		highlight.FillColor = Color3.new(1, 0, 0) -- Красный цвет
+		highlight.OutlineColor = Color3.new(1, 1, 1) -- Белая обводка
+	end
+end
+
+Tab1:AddButton({
+	Name = "Enable ESP",
+	Callback = function()
+		for _, player in ipairs(game.Players:GetPlayers()) do
+			if player.Character then
+				addESP(player)
+			end
+			player.CharacterAdded:Connect(function()
+				addESP(player)
+			end)
+		end
+		print("ESP enabled for all players.")
+	end
+})
+
+Tab2:AddButton({
+	Name = "Код",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(99, 7, 21)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Вспомнил",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(86, 7, -97)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Канализация",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(12, 89, -614)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Паркур",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎105, 89, -855)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "конец паркура",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎67, 90, -777)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "туалет",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎-26, 117, -814)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "конец спящего шрека",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎-0, 117, -733)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Конец",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎-52, 118, -786)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Выборы",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎-67, 150, -750)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "дом осла",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎-40, 150, -783)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "дракон",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎-89, 150, -778)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "место присмерти",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎30, 134, -746)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "евент",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎106, 7, -120)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "конец сложного евента",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(‎‎‎‎‎-421, 137, 15672)
+			print("teleported...")
+		else
+			warn("HumanoidRootPart not found. Teleport failed.")
+		end
+	end
+})
