@@ -1,20 +1,8 @@
-local HenyLib = {RainbowColorValue = 0, HueSelectionPosition = 0}
+local HenyLib = {RainbowColorValue = 0}
 
 -- Плавный цвет радуги
-function zigzag(X)
-    return math.acos(math.cos(X * math.pi)) / math.pi
-end
-
-counter = 0
-local UserInputService = game:GetService("UserInputService")
-local TweenService = game:GetService("TweenService")
-local RunService = game:GetService("RunService")
-local LocalPlayer = game:GetService("Players").LocalPlayer
-
--- Обновление радуги
 coroutine.wrap(function()
     while wait() do
-        counter = counter + 0.002
         HenyLib.RainbowColorValue = HenyLib.RainbowColorValue + 1 / 255
         if HenyLib.RainbowColorValue >= 1 then
             HenyLib.RainbowColorValue = 0
@@ -22,7 +10,7 @@ coroutine.wrap(function()
     end
 end)()
 
--- Функция для перетаскивания окон
+-- Перетаскивание окон
 local function MakeDraggable(topbarobject, object)
     local Dragging, DragStart, StartPosition
     local DragInput
@@ -57,7 +45,7 @@ local function MakeDraggable(topbarobject, object)
         end
     end)
 
-    UserInputService.InputChanged:Connect(function(input)
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
         if input == DragInput and Dragging then
             Update(input)
         end
@@ -92,24 +80,78 @@ function HenyLib:Window(title)
 
     local Window = {}
     function Window:Tab(tabName)
+        local TabFrame = Instance.new("Frame", MainFrame)
         local TabButton = Instance.new("TextButton", TopBar)
+
+        TabFrame.Visible = false
+        TabFrame.Size = UDim2.new(1, 0, 1, -30)
+        TabFrame.Position = UDim2.new(0, 0, 0, 30)
+        TabFrame.BackgroundTransparency = 1
+
         TabButton.Text = tabName
         TabButton.Size = UDim2.new(0, 100, 0, 30)
         TabButton.Position = UDim2.new(#TopBar:GetChildren() * 0.25, 0, 0, 0)
         TabButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 
-        return {
-            Button = function(buttonName, callback)
-                local Button = Instance.new("TextButton", MainFrame)
-                Button.Text = buttonName
-                Button.Size = UDim2.new(0, 200, 0, 50)
-                Button.Position = UDim2.new(0.5, -100, 0.5, -25)
-                Button.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-                Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-                Button.MouseButton1Click:Connect(callback)
-            end,
-        }
+        TabButton.MouseButton1Click:Connect(function()
+            for _, frame in ipairs(MainFrame:GetChildren()) do
+                if frame:IsA("Frame") and frame ~= TopBar then
+                    frame.Visible = false
+                end
+            end
+            TabFrame.Visible = true
+        end)
+
+        local Elements = {}
+        function Elements:Button(buttonName, callback)
+            local Button = Instance.new("TextButton", TabFrame)
+            Button.Text = buttonName
+            Button.Size = UDim2.new(0, 200, 0, 50)
+            Button.Position = UDim2.new(0.5, -100, 0.5, -25)
+            Button.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+            Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Button.MouseButton1Click:Connect(callback)
+        end
+
+        function Elements:Label(labelText)
+            local Label = Instance.new("TextLabel", TabFrame)
+            Label.Text = labelText
+            Label.Size = UDim2.new(0, 200, 0, 50)
+            Label.Position = UDim2.new(0.5, -100, 0.5, -25)
+            Label.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+            Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+        end
+
+        function Elements:TextBox(placeholder, callback)
+            local TextBox = Instance.new("TextBox", TabFrame)
+            TextBox.PlaceholderText = placeholder
+            TextBox.Size = UDim2.new(0, 200, 0, 50)
+            TextBox.Position = UDim2.new(0.5, -100, 0.5, 50)
+            TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+            TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+            TextBox.FocusLost:Connect(function()
+                callback(TextBox.Text)
+            end)
+        end
+
+        function Elements:Toggle(toggleName, callback)
+            local Toggle = Instance.new("TextButton", TabFrame)
+            local IsToggled = false
+            Toggle.Text = toggleName .. " [OFF]"
+            Toggle.Size = UDim2.new(0, 200, 0, 50)
+            Toggle.Position = UDim2.new(0.5, -100, 0.5, -25)
+            Toggle.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+            Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+            Toggle.MouseButton1Click:Connect(function()
+                IsToggled = not IsToggled
+                Toggle.Text = toggleName .. (IsToggled and " [ON]" or " [OFF]")
+                callback(IsToggled)
+            end)
+        end
+
+        return Elements
     end
 
     return Window
