@@ -1,5 +1,38 @@
 local FoxGui = {}
 
+-- Функция для перемещения GUI
+local function MakeDraggable(frame, handle)
+    handle.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            local startPosition = frame.Position
+            local dragStart = input.Position
+            local dragging = true
+
+            local inputChanged
+            inputChanged = handle.InputChanged:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseMovement and dragging then
+                    local delta = input.Position - dragStart
+                    frame.Position = UDim2.new(
+                        startPosition.X.Scale,
+                        startPosition.X.Offset + delta.X,
+                        startPosition.Y.Scale,
+                        startPosition.Y.Offset + delta.Y
+                    )
+                end
+            end)
+
+            local release
+            release = input.InputEnded:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = false
+                    inputChanged:Disconnect()
+                    release:Disconnect()
+                end
+            end)
+        end
+    end)
+end
+
 -- Создание основного окна
 function FoxGui:MakeWindow(config)
     local ScreenGui = Instance.new("ScreenGui")
@@ -8,13 +41,15 @@ function FoxGui:MakeWindow(config)
 
     -- Установка параметров
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    ScreenGui.Name = "FoxGui"
+
     MainFrame.Name = "MainFrame"
     MainFrame.Parent = ScreenGui
     MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MainFrame.Size = UDim2.new(0, 500, 0, 400)
     MainFrame.Position = UDim2.new(0.5, -250, 0.5, -200)
     MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-    
+
     Title.Name = "Title"
     Title.Parent = MainFrame
     Title.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
@@ -23,8 +58,14 @@ function FoxGui:MakeWindow(config)
     Title.Text = config.Title or "Fox Hub"
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
     Title.TextSize = 16
+    Title.TextXAlignment = Enum.TextXAlignment.Left
+    Title.TextYAlignment = Enum.TextYAlignment.Center
+    Title.TextScaled = false
+    Title.Position = UDim2.new(0, 10, 0, 0)
 
-    -- Возврат окна
+    -- Делаем окно перемещаемым
+    MakeDraggable(MainFrame, Title)
+
     return MainFrame
 end
 
