@@ -1,0 +1,170 @@
+-- FoxHub UI Library
+local Library = {}
+
+-- Create UI Components
+function Library:CreateWindow(title)
+    local ScreenGui = Instance.new("ScreenGui")
+    local MainFrame = Instance.new("Frame")
+    local Title = Instance.new("TextLabel")
+
+    ScreenGui.Name = "FoxHub"
+    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    ScreenGui.ResetOnSpawn = false
+
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = ScreenGui
+    MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    MainFrame.BorderSizePixel = 0
+    MainFrame.Size = UDim2.new(0, 400, 0, 300)
+    MainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
+    MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+
+    Title.Name = "Title"
+    Title.Parent = MainFrame
+    Title.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    Title.BorderSizePixel = 0
+    Title.Size = UDim2.new(1, 0, 0, 30)
+    Title.Font = Enum.Font.Gotham
+    Title.Text = title or "Fox Hub"
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.TextSize = 16
+
+    return MainFrame
+end
+
+function Library:CreateSection(parent, sectionTitle)
+    local SectionFrame = Instance.new("Frame")
+    local SectionTitle = Instance.new("TextLabel")
+
+    SectionFrame.Name = "SectionFrame"
+    SectionFrame.Parent = parent
+    SectionFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    SectionFrame.BorderSizePixel = 0
+    SectionFrame.Size = UDim2.new(1, -20, 0, 150)
+    SectionFrame.Position = UDim2.new(0, 10, 0, 40)
+
+    SectionTitle.Name = "SectionTitle"
+    SectionTitle.Parent = SectionFrame
+    SectionTitle.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    SectionTitle.BorderSizePixel = 0
+    SectionTitle.Size = UDim2.new(1, 0, 0, 20)
+    SectionTitle.Font = Enum.Font.Gotham
+    SectionTitle.Text = sectionTitle or "Section"
+    SectionTitle.TextColor3 = Color3.fromRGB(255, 170, 0)
+    SectionTitle.TextSize = 14
+
+    return SectionFrame
+end
+
+function Library:CreateToggle(parent, toggleText, callback)
+    local ToggleFrame = Instance.new("Frame")
+    local ToggleButton = Instance.new("TextButton")
+    local ToggleText = Instance.new("TextLabel")
+
+    ToggleFrame.Name = "ToggleFrame"
+    ToggleFrame.Parent = parent
+    ToggleFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    ToggleFrame.BorderSizePixel = 0
+    ToggleFrame.Size = UDim2.new(1, 0, 0, 30)
+
+    ToggleButton.Name = "ToggleButton"
+    ToggleButton.Parent = ToggleFrame
+    ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+    ToggleButton.Position = UDim2.new(0.9, -30, 0.5, -15)
+    ToggleButton.Size = UDim2.new(0, 30, 0, 30)
+    ToggleButton.Text = ""
+    ToggleButton.AutoButtonColor = false
+
+    ToggleText.Name = "ToggleText"
+    ToggleText.Parent = ToggleFrame
+    ToggleText.BackgroundTransparency = 1
+    ToggleText.Size = UDim2.new(0.8, 0, 1, 0)
+    ToggleText.Font = Enum.Font.Gotham
+    ToggleText.Text = toggleText or "Toggle"
+    ToggleText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    ToggleText.TextSize = 14
+    ToggleText.TextXAlignment = Enum.TextXAlignment.Left
+
+    local toggled = false
+    ToggleButton.MouseButton1Click:Connect(function()
+        toggled = not toggled
+        ToggleButton.BackgroundColor3 = toggled and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+        if callback then
+            callback(toggled)
+        end
+    end)
+
+    return ToggleFrame
+end
+
+function Library:CreateSlider(parent, sliderText, min, max, callback)
+    local SliderFrame = Instance.new("Frame")
+    local SliderLabel = Instance.new("TextLabel")
+    local Slider = Instance.new("TextButton")
+
+    SliderFrame.Name = "SliderFrame"
+    SliderFrame.Parent = parent
+    SliderFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    SliderFrame.BorderSizePixel = 0
+    SliderFrame.Size = UDim2.new(1, 0, 0, 40)
+
+    SliderLabel.Name = "SliderLabel"
+    SliderLabel.Parent = SliderFrame
+    SliderLabel.BackgroundTransparency = 1
+    SliderLabel.Size = UDim2.new(1, -40, 0.5, 0)
+    SliderLabel.Font = Enum.Font.Gotham
+    SliderLabel.Text = sliderText or "Slider"
+    SliderLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    SliderLabel.TextSize = 14
+    SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+    Slider.Name = "Slider"
+    Slider.Parent = SliderFrame
+    Slider.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+    Slider.Position = UDim2.new(0, 0, 0.5, 10)
+    Slider.Size = UDim2.new(1, 0, 0, 20)
+    Slider.AutoButtonColor = false
+    Slider.Text = ""
+
+    Slider.MouseButton1Down:Connect(function()
+        local uis = game:GetService("UserInputService")
+        local mouse = game.Players.LocalPlayer:GetMouse()
+
+        local function updateSlider()
+            local delta = math.clamp(mouse.X - Slider.AbsolutePosition.X, 0, SliderFrame.AbsoluteSize.X)
+            local value = math.floor((delta / SliderFrame.AbsoluteSize.X) * (max - min) + min)
+            Slider.Size = UDim2.new(0, delta, 0, 20)
+            if callback then
+                callback(value)
+            end
+        end
+
+        updateSlider()
+        local connection
+        connection = uis.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement then
+                updateSlider()
+            end
+        end)
+
+        uis.InputEnded:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                connection:Disconnect()
+            end
+        end)
+    end)
+
+    return SliderFrame
+end
+
+-- Example Usage
+local MainUI = Library:CreateWindow("Fox Hub")
+local Section1 = Library:CreateSection(MainUI, "Test1")
+Library:CreateToggle(Section1, "Toggle", function(state)
+    print("Toggle is now:", state)
+end)
+Library:CreateSlider(Section1, "Slider", 0, 100, function(value)
+    print("Slider value:", value)
+end)
+
+local Section2 = Library:CreateSection(MainUI, "Test2")
