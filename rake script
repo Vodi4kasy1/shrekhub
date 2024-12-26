@@ -1,0 +1,169 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+
+local Window = OrionLib:MakeWindow({Name = "Farm Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "FarmConfig"})
+
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local isFarming = false
+local isShowingInfo = false
+local infoBillboards = {}
+local originalPositions = {} -- Храним оригинальные позиции объектов
+
+local function renameToCash()
+    local cashFolder = workspace:FindFirstChild("Cash")
+    if cashFolder then
+        for _, obj in pairs(cashFolder:GetChildren()) do
+            if obj.Name ~= "Cash" then
+                obj.Name = "Cash"
+            end
+        end
+    end
+end
+
+local function saveOriginalPositions()
+    local cashFolder = workspace:FindFirstChild("Cash")
+    if cashFolder then
+        for _, cashPart in pairs(cashFolder:GetChildren()) do
+            if cashPart:IsA("BasePart") and cashPart.Name == "Cash" then
+                originalPositions[cashPart] = cashPart.CFrame
+            end
+        end
+    end
+end
+
+local function restoreOriginalPositions()
+    for cashPart, originalCFrame in pairs(originalPositions) do
+        if cashPart and cashPart:IsDescendantOf(workspace) then
+            cashPart.CFrame = originalCFrame
+            cashPart.Anchored = true
+        end
+    end
+    originalPositions = {} -- Очищаем таблицу после восстановления
+end
+
+local function updateInfo()
+    local player = game.Players.LocalPlayer
+    if not player or not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") then
+        warn("Player or HumanoidRootPart not found")
+        return
+    end
+
+    local cashFolder = workspace:FindFirstChild("Cash")
+    if cashFolder then
+        for _, cashPart in pairs(cashFolder:GetChildren()) do
+            if cashPart:IsA("BasePart") and cashPart.Name == "Cash" then
+                local billboard = infoBillboards[cashPart]
+
+                if not billboard then
+                    -- Создаем новый BillboardGui
+                    billboard = Instance.new("BillboardGui")
+                    billboard.Adornee = cashPart
+                    billboard.Size = UDim2.new(0, 200, 0, 50)
+                    billboard.StudsOffset = Vector3.new(0, 2, 0)
+                    billboard.AlwaysOnTop = true
+
+                    local textLabel = Instance.new("TextLabel")
+                    textLabel.Size = UDim2.new(1, 0, 1, 0)
+                    textLabel.BackgroundTransparency = 1
+                    textLabel.TextColor3 = Color3.new(1, 1, 1)
+                    textLabel.TextScaled = true
+                    textLabel.Parent = billboard
+
+                    billboard.Parent = cashPart
+                    infoBillboards[cashPart] = billboard
+                    print("Billboard created for:", cashPart.Name)
+                end
+
+                local textLabel = billboard:FindFirstChildOfClass("TextLabel")
+                if textLabel then
+                    local distance = (cashPart.Position - player.Character.HumanoidRootPart.Position).Magnitude
+                    textLabel.Text = string.format("%s\n%.2f м", cashPart.Name, distance)
+                else
+                    warn("TextLabel not found in BillboardGui")
+                end
+            else
+                warn("Invalid part in Cash folder or wrong name:", cashPart.Name)
+            end
+        end
+    else
+        warn("Cash folder not found in workspace")
+    end
+end
+
+local function clearInfo()
+    for _, billboard in pairs(infoBillboards) do
+        if billboard.Parent then
+            billboard:Destroy()
+        end
+    end
+    infoBillboards = {}
+end
+
+local function farmCash()
+    saveOriginalPositions()
+    while isFarming do
+        renameToCash() 
+        local cashFolder = workspace:FindFirstChild("Cash")
+        if cashFolder then
+            for _, cashPart in pairs(cashFolder:GetChildren()) do
+                if cashPart:IsA("BasePart") or cashPart:IsA("Model") then
+                    if cashPart.Name == "Cash" then
+                        -- Убираем анчоринг и телепортируем объект Cash к игроку
+                        if cashPart:IsA("BasePart") then
+                            cashPart.Anchored = false
+                        end
+                        local player = game.Players.LocalPlayer
+                        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                            cashPart.CFrame = player.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5)
+                            -- Нажимаем на ClickDetector, если он существует
+                            local clickDetector = cashPart:FindFirstChildOfClass("ClickDetector")
+                            if clickDetector then
+                                fireclickdetector(clickDetector)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        wait(0.1)
+    end
+end
+
+Tab:AddToggle({
+    Name = "Farm Money",
+    Default = false,
+    Callback = function(state)
+        isFarming = state
+        if isFarming then
+            spawn(farmCash)
+        else
+            restoreOriginalPositions()
+        end
+    end
+})
+
+Tab:AddToggle({
+    Name = "Show Info",
+    Default = false,
+    Callback = function(state)
+        isShowingInfo = state
+        if not isShowingInfo then
+            clearInfo()
+        end
+    end
+})
+
+spawn(function()
+    while true do
+        if isShowingInfo then
+            updateInfo()
+        end
+        wait(0.1)
+    end
+end)
+
+OrionLib:Init
